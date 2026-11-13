@@ -220,7 +220,7 @@ We built the whole product with Claude (Claude Code) in a "harness" adapted from
 
 ## Tracking plan
 
-**Full tracking plan: [Tracking Plan - Lai That.docx](<docs/Tracking Plan - Lai That.docx>)** (Word). The machine-readable spec used by the code and tests is [docs/TRACKING_PLAN.md](docs/TRACKING_PLAN.md). (each event, what it measures, why it matters, funnel and KPI targets).
+**Full tracking plan: [Tracking Plan - Lai That.docx](<docs/Tracking Plan - Lai That.docx>)** (Word). The machine-readable spec used by the code and tests is [docs/tracking_plan.csv](docs/tracking_plan.csv). (each event, what it measures, why it matters, funnel and KPI targets).
 
 - 32 events cover the funnel install → `onboarding_completed` → `calc_completed` → `product_saved` → `paywall_view` → `purchase`, plus ads, sharing, fee alerts, Combo and Order check.
 - No price, cost, product name, order ID or file content is ever sent, only buckets and reason codes.
@@ -267,7 +267,7 @@ raw/                 source material, read-only (fee announcements, real orders,
 app/                 the product: engine.js · calc.js · addons.js · xlsx.js · store.js · ui.js · ui-addons.js · pro.js · ads.js · billing.js · native.js · tests/
 mobile/              Capacitor Android project (AdMob + Play Billing)
 tools/               Python reference engine, validation, store screenshots
-docs/                tracking plan (.docx + spec .md), market deep dive, store listing, launch checklist, validation report, demo script
+docs/                tracking plan (.docx + spec .csv), market deep dive, store listing, launch checklist, validation report, demo script
 brand/               logo, splash animation, store screenshots, demo video
 flutter/             Dart port of the fee engine (kept in sync, not shipped)
 ```

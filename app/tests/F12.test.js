@@ -1,4 +1,4 @@
-// F12 — Tracking theo docs/TRACKING_PLAN.md (1-wiki/features/F12-tracking.md)
+// F12 — Tracking theo docs/tracking_plan.csv (1-wiki/features/F12-tracking.md)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -6,10 +6,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { EVENTS, EVENT_PARAMS, track, defaultState, marginBucket, calcTracker } from '../store.js';
 
-const plan = readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'docs', 'TRACKING_PLAN.md'), 'utf8');
-const rows = [...plan.matchAll(/^\| `([a-z_]+)` \|[^|]*\|([^|]*)\|/gm)].map((m) => ({ name: m[1], params: [...m[2].matchAll(/`([a-z_]+)`/g)].map((x) => x[1]) }));
+import { readPlan } from './tracking-plan.mjs';
+const rows = readPlan().rows.map((r) => ({ name: r.event, params: r.properties }));
 
-test('danh sách sự kiện đúng bằng TRACKING_PLAN.md', () => {
+test('danh sách sự kiện đúng bằng docs/tracking_plan.csv', () => {
   assert.ok(rows.length >= 20);
   assert.deepEqual([...EVENTS].sort(), rows.map((r) => r.name).sort());
   for (const r of rows) assert.deepEqual([...EVENT_PARAMS[r.name]].sort(), [...r.params].sort(), r.name);

@@ -9,5 +9,5 @@
   | Firebase Remote Config `fee_presets` | tải `assets/fee_presets.json` mới nhất khi mở app + mỗi ngày → cache → bản đóng gói |
   | SQLite danh mục | localStorage |
   | Thông báo cục bộ + WorkManager | Web Notification (xin quyền khi bật báo động) + hộp thông báo trong app; kiểm tra khi mở app và mỗi 24 giờ |
-  | Firebase Analytics | log sự kiện cục bộ đúng tên/thuộc tính trong `docs/TRACKING_PLAN.md` |
+  | Firebase Analytics | log sự kiện cục bộ đúng tên/thuộc tính trong `docs/tracking_plan.csv` |
 - **Hệ quả:** `flutter/` giữ nguyên làm bản tham chiếu để port sau.

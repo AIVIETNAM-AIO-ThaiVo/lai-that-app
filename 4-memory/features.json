@@ -165,17 +165,17 @@
   },
   {
     "id": "F12",
-    "title": "Tracking theo TRACKING_PLAN",
+    "title": "Tracking theo docs/tracking_plan.csv",
     "page": "1-wiki/features/F12-tracking.md",
     "done": [
-      "`EVENTS` trong code đúng bằng danh sách sự kiện của `docs/TRACKING_PLAN.md`; `track` từ chối tên lạ (unit test đọc file plan).",
+      "`EVENTS` trong code đúng bằng danh sách sự kiện của `docs/tracking_plan.csv`; `track` từ chối tên lạ (unit test đọc file CSV).",
       "`track` loại thuộc tính không có trong plan cho sự kiện đó và không bao giờ ghi giá, giá vốn, tên sản phẩm (unit test).",
       "`marginBucket`: <0 / 0–5 / 5–10 / 10–20 / >20 đúng ngưỡng.",
       "`calc_completed` chỉ ghi 1 lần cho một bộ đầu vào, sau khi ngừng gõ 1,5 giây (unit test với đồng hồ giả).",
       "Trên bot: một lượt dùng đi qua phễu `onboarding_completed → calc_completed → product_saved`."
     ],
     "state": "passing",
-    "verified_at": "2026-11-12T16:52:14.212Z"
+    "verified_at": "2026-11-13T06:57:41.549Z"
   },
   {
     "id": "F13",
@@ -405,7 +405,7 @@
       "**Kết quả dính đáy (C4–C5):** lãi combo + % + chữ trạng thái; \"Bán lẻ N đơn: X · Combo ±Y\"; \"Sàn + thuế lấy A% thay vì B% khi bán lẻ\"; nút \"Xem chi tiết\".",
       "**Chi tiết (C6):** bảng phí có nhãn \"mỗi SP\" / \"mỗi đơn\"; giảm tối đa giữ lãi 20% / 10% / hòa vốn (làm tròn **xuống** % nguyên); dưới mức tối thiểu của sàn thì nói rõ lãi ở mức 5%; giá combo gợi ý giữ lãi 20% (làm tròn **lên** giá đẹp).",
       "**Lưu (C7):** `#combo-save` → Danh mục có dòng nhãn \"Bộ · N món\"; món lấy từ danh mục liên kết theo id: sửa giá vốn sản phẩm thì combo tính lại; xoá sản phẩm thì combo giữ bản sao và ghi \"món gốc đã xoá\". Báo động đổi phí và sắp xếp lãi thấp dùng chung. Hết Pro: combo đã lưu vẫn hiện (chỉ xem).",
-      "Tracking: `combo_built`, `combo_vs_separate_viewed`, `combo_max_discount_viewed`, `combo_saved` đúng tham số trong `docs/TRACKING_PLAN.md`; không gửi giá, tên sản phẩm. Không quảng cáo trên màn combo."
+      "Tracking: `combo_built`, `combo_vs_separate_viewed`, `combo_max_discount_viewed`, `combo_saved` đúng tham số trong `docs/tracking_plan.csv`; không gửi giá, tên sản phẩm. Không quảng cáo trên màn combo."
     ],
     "state": "passing",
     "verified_at": "2026-11-13T05:13:25.098Z"

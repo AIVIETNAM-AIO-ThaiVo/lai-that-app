@@ -94,3 +94,5 @@
 - 2026-11-13 · design: a5 b5 c5 d4 e4
 - 2026-11-13 · F18 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
 - 2026-11-13 · F18 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F12 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F12 ✅ passing (verify.sh xanh)

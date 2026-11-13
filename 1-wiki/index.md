@@ -7,7 +7,7 @@
 - **Bộ máy tính:** [formula](engine/formula.md) · [test-cases](engine/test-cases.md) · đối chiếu đơn thật: `docs/VALIDATION_REPORT.md`
 - **Sản phẩm:** [features (P0/P1/P2)](product/features.md) · [decisions](product/decisions.md) · [ADR-001 web trước](product/ADR-001-web-truoc.md) · [competitors](product/competitors.md)
 - **Thiết kế:** [design/style.md](design/style.md) · [screens.md](screens.md) (selector cho bot) · canvas gốc `design-canvas/*.dc.html`
-- **Tài liệu nộp bài:** `docs/` (TRACKING_PLAN, STORE_LISTING, LAUNCH_CHECKLIST, privacy-policy, DEMO_VIDEO_SCRIPT, BUILD_PLAN)
+- **Tài liệu nộp bài:** `docs/` (Tracking Plan .docx + tracking_plan.csv, STORE_LISTING, LAUNCH_CHECKLIST, privacy-policy, DEMO_VIDEO_SCRIPT, BUILD_PLAN)
 - **Tính năng** (mỗi trang có *Done when*):
   - Phase 1 · ngày 1: [F1 Bộ máy tính](features/F1-bo-may-tinh.md) · [F2 Biểu phí & nguồn](features/F2-bieu-phi-nguon.md) · [F3 Chọn sàn](features/F3-chon-san.md) · [F4 Tính từ giá bán](features/F4-tinh-lai-tu-gia-ban.md) · [F5 Tính từ % lãi](features/F5-tinh-tu-phan-tram-lai.md) · [F6 Chi tiết phí](features/F6-chi-tiet-phi.md)
   - Phase 2 · ngày 2: [F7 So sánh sàn](features/F7-so-sanh-san.md) · [F8 Chi phí ẩn](features/F8-chi-phi-an.md) · [F9 Flash Sale & giá nhập](features/F9-flash-sale-gia-nhap.md) · [F10 Danh mục](features/F10-danh-muc.md) · [F11 Báo động đổi phí](features/F11-bao-dong-doi-phi.md) · [F12 Tracking](features/F12-tracking.md)

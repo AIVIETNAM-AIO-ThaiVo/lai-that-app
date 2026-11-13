@@ -56,3 +56,5 @@ Nhật ký gốc của launch kit (12/11/2026, trước khi vào harness): [kit-
 - 13/11 · docs · README: viết lại pitch, vấn đề, người dùng, kênh phát hành, cách có người dùng và doanh thu; thêm phần research thị trường diện rộng bằng Claude (7 vòng, ~35 agent) vào AI-native workflow.
 - 2026-11-13 · build · F18 ✅ passing (Miễn phí cố định 30 ngày cho shop mới)
 - 13/11 · Bỏ Mall (PO): F3 không hỏi loại shop, F18 chỉ còn miễn phí 30 ngày shop mới; onboarding_completed bỏ shop_type. README: bảng Team 5 người. Verify xanh.
+- 2026-11-13 · build · F12 ✅ passing (Tracking theo docs/tracking_plan.csv)
+- 13/11 · Bỏ docs/TRACKING_PLAN.md (PO): đặc tả tracking chuyển sang docs/tracking_plan.csv (sinh lại sạch, 32 sự kiện), bản đọc là docs/Tracking Plan - Lai That.docx; test đọc CSV qua app/tests/tracking-plan.mjs. Verify xanh.

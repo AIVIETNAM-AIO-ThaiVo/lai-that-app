@@ -1,4 +1,4 @@
-// Trạng thái app (hàm thuần) + tracking theo docs/TRACKING_PLAN.md. ui.js gọi rồi tự lưu localStorage.
+// Trạng thái app (hàm thuần) + tracking theo docs/tracking_plan.csv. ui.js gọi rồi tự lưu localStorage.
 
 import { calculate } from './engine.js';
 import { newerVersion, SHORT_NAME, PLATFORMS } from './presets.js';
@@ -8,7 +8,7 @@ import { diffCombos, checkOrder, productCheckArgs, checkSummary, FREE_FILE_DETAI
 
 export const STORAGE_KEY = 'laithat:v1';
 
-/** Sự kiện + thuộc tính cho phép, đúng docs/TRACKING_PLAN.md. Không giá, giá vốn, tên sản phẩm. */
+/** Sự kiện + thuộc tính cho phép, đúng docs/tracking_plan.csv. Không giá, giá vốn, tên sản phẩm. */
 export const EVENT_PARAMS = {
   onboarding_completed: ['primary_platform'],
   calc_completed: ['platform', 'category_id', 'mode', 'state', 'margin_bucket', 'has_seller_voucher', 'has_ship_buyer', 'programs_on'],

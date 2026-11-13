@@ -9,6 +9,7 @@ import { readXlsx, parseIncome, readIncomeFile, fileErrorText } from '../xlsx.js
 import { checkOrder, checkSummary, productCheckArgs, FREE_FILE_DETAILS } from '../addons.js';
 import { defaultState, saveProduct, mapSku, runFileCheck, isPro, EVENT_PARAMS } from '../store.js';
 import { buildXlsx, incomeWorkbook, REAL_ORDERS, SKU_PRODUCTS } from './xlsx-fixture.mjs';
+import { readPlan } from './tracking-plan.mjs';
 
 const APP = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -95,9 +96,9 @@ test('file sai mẫu / không phải xlsx → báo lỗi, không treo (KD8)', as
 test('quyền riêng tư: chính sách ghi tệp báo cáo đọc trên máy; paywall order_check_file trong tracking plan', () => {
   const html = readFileSync(path.join(APP, 'privacy.html'), 'utf8');
   assert.ok(html.includes('Tệp báo cáo bạn chọn được đọc trên thiết bị và không được gửi đi.'));
-  const plan = readFileSync(path.join(APP, '..', 'docs', 'TRACKING_PLAN.md'), 'utf8');
-  assert.ok(plan.split('\n').find((l) => l.includes('`paywall_view`')).includes('order_check_file'));
-  assert.ok(plan.includes('`order_check_file_error`'));
+  const plan = readPlan();
+  assert.ok(plan.byName.get('paywall_view').values.includes('order_check_file'));
+  assert.ok(plan.byName.has('order_check_file_error'));
 });
 
 test('dùng lại cài đặt sản phẩm đã lưu cho từng đơn', () => {

@@ -7,7 +7,7 @@ hoặc nhập % lãi muốn có → ra **giá nên bán** (đã làm tròn giá 
 - **Bộ máy tính:** [engine/formula.md](engine/formula.md) — khớp **8/8 đơn Shopee thật** (lệch 0–1đ), xem `docs/VALIDATION_REPORT.md`.
 - **Biểu phí:** [fees/shopee.md](fees/shopee.md) · [fees/tiktok_shop.md](fees/tiktok_shop.md) · [fees/lazada.md](fees/lazada.md) → `app/assets/fee_presets.json` (`fee_version` 2026-11-12.1).
 - **Sản phẩm:** [product/features.md](product/features.md) (P0/P1/P2) · [product/decisions.md](product/decisions.md) · [product/competitors.md](product/competitors.md)
-- **Tracking:** `docs/TRACKING_PLAN.md` · **Phát hành:** `docs/LAUNCH_CHECKLIST.md`, `docs/STORE_LISTING.md`
+- **Tracking:** `docs/tracking_plan.csv` · **Phát hành:** `docs/LAUNCH_CHECKLIST.md`, `docs/STORE_LISTING.md`
 - **Phase build:** [phases.md](phases.md) — lần build này dừng ở **P1** và **ngày 2** của `docs/BUILD_PLAN.md`.
 
 ## Cho ai

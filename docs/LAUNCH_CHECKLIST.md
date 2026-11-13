@@ -9,7 +9,7 @@ Hạn nộp bài: Chủ nhật 15/11/2026, 23:59. Ô [ ] là việc cần làm; 
 
 - [ ] Tạo project, thêm app Android với package `vn.laithat.app` (hoặc tên nhóm chọn; không chứa tên sàn).
 - [ ] Bật Analytics, Crashlytics, Remote Config.
-- [ ] Nối `track()` (`app/store.js`) với Firebase Analytics trong bản Android (hiện sự kiện chỉ ghi trên máy; tên + thuộc tính đã khớp `docs/TRACKING_PLAN.md`).
+- [ ] Nối `track()` (`app/store.js`) với Firebase Analytics trong bản Android (hiện sự kiện chỉ ghi trên máy; tên + thuộc tính đã khớp `docs/tracking_plan.csv`).
 - [ ] Remote Config, tạo các khóa:
 
 | Khóa | Kiểu | Giá trị ban đầu |
@@ -51,7 +51,7 @@ Hạn nộp bài: Chủ nhật 15/11/2026, 23:59. Ô [ ] là việc cần làm; 
 ## 5. Bài nộp
 
 - [ ] Repo GitHub: cấu trúc như README (CLAUDE.md, raw/, wiki/, app/, tools/, docs/). — chưa đẩy: repo chưa có remote
-- [x] README.md (có sẵn), TRACKING_PLAN.md (có sẵn), VALIDATION_REPORT.md (có sẵn).
+- [x] README.md, Tracking Plan (`docs/Tracking Plan - Lai That.docx`, đặc tả `docs/tracking_plan.csv`), VALIDATION_REPORT.md.
 - [x] Video demo 2–3 phút theo `docs/DEMO_VIDEO_SCRIPT.md`. — `brand/video/lai-that-demo-2m59.mp4` (2:59, 1920×1080, chỉ nhạc, có Combo + Kiểm tra đơn; PO đã duyệt 13/11). File 116 MB > giới hạn 100 MB của GitHub → đã đưa vào `.gitignore`.
 - [x] Video trên YouTube (không công khai): https://youtu.be/CnKY1uwEHC0 — đã dán vào README.
 - [x] Bảng **Team** trong README: 5 thành viên + vai trò (bản phân vai đầu, 13/11).

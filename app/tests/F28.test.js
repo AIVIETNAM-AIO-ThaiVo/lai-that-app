@@ -11,6 +11,7 @@ import {
   comboEventParams,
 } from '../addons.js';
 import { defaultState, saveProduct, saveCombo, removeProduct, applyFeeUpdate, EVENT_PARAMS } from '../store.js';
+import { readPlan } from './tracking-plan.mjs';
 
 const APP = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const near = (a, b, tol = 0.5) => assert.ok(Math.abs(a - b) <= tol, `${a} ≠ ${b}`);
@@ -120,14 +121,13 @@ test('báo động đổi phí phủ cả combo', () => {
 });
 
 test('tracking combo đúng tracking plan, không gửi giá/tên', () => {
-  const plan = readFileSync(path.join(APP, '..', 'docs', 'TRACKING_PLAN.md'), 'utf8');
+  const plan = readPlan();
   for (const e of ['combo_built', 'combo_vs_separate_viewed', 'combo_max_discount_viewed', 'combo_saved']) {
     assert.ok(EVENT_PARAMS[e], e);
-    assert.ok(plan.includes(`\`${e}\``), e);
+    assert.ok(plan.byName.has(e), e);
     for (const p of EVENT_PARAMS[e]) assert.ok(!/price|name|cost/.test(p), p);
   }
-  const line = plan.split('\n').find((l) => l.includes('`paywall_view`'));
-  assert.ok(line.includes('combo_tab'));
+  assert.ok(plan.byName.get('paywall_view').values.includes('combo_tab'));
   const v = comboView(presets, SAMPLE_COMBO);
   assert.deepEqual(comboEventParams(SAMPLE_COMBO, v), { platform: 'shopee', mode: 'promo', items_count: 3, discount_type: 'percent', margin_bucket: '10–20' });
 });

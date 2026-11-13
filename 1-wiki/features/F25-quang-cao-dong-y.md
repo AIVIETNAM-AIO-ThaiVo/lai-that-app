@@ -2,7 +2,7 @@
 
 **Phase:** 8 (ngày 3) · **Màn:** Danh mục, Cài đặt (Biểu phí), lớp `#interstitial`, `#rewarded`
 
-Luật (`docs/TRACKING_PLAN.md`, `decisions.md`): banner thích ứng ở **Danh mục** và **Biểu phí**; interstitial sau `calc_completed`
+Luật (`docs/tracking_plan.csv`, `decisions.md`): banner thích ứng ở **Danh mục** và **Biểu phí**; interstitial sau `calc_completed`
 thứ 3 trong phiên, tối đa 3 phút/lần, **không** trong 2 phiên đầu; rewarded mở 1 lần Flash Sale / giá nhập tối đa.
 **Không quảng cáo trên màn Tính lãi.** Pro không có quảng cáo.
 

@@ -39,7 +39,7 @@ Bạn là **Model** kiêm **Product Manager**: tự xếp việc, tự build, t�
 - Không đăng nhập, không API sàn, không quản lý đơn hàng.
 - **Không khoá** tính lãi, chi tiết phí, tính theo % lãi, so sánh sàn sau paywall.
 - Không quảng cáo trên màn Tính lãi; không interstitial trong 2 phiên đầu.
-- Mọi sự kiện tracking phải có trong `docs/TRACKING_PLAN.md` trước khi code; không gửi giá, giá vốn, tên sản phẩm.
+- Mọi sự kiện tracking phải có trong `docs/tracking_plan.csv` trước khi code; không gửi giá, giá vốn, tên sản phẩm.
 - Mọi kết quả hiện "Biểu phí cập nhật ngày …".
 - Giọng văn: con số trước, chữ sau; trạng thái luôn có chữ (Lãi / Lãi mỏng / Lỗ), không chỉ màu.
 

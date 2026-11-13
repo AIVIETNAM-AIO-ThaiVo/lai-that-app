@@ -10,6 +10,7 @@ import {
   checkOrder, statusOf, fixAction, complaintTemplate, statusHeadline, realProfit, productCheckArgs, ORDER_FIELDS, STATUS_LABEL,
 } from '../addons.js';
 import { defaultState, saveProduct, applyCheckFix, EVENT_PARAMS } from '../store.js';
+import { readPlan } from './tracking-plan.mjs';
 
 const APP = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const optsOf = (kw) => ({ vat: kw.vat ?? true, pit: kw.pit ?? true, items: kw.items ?? 1, newShop: !!kw.new_shop });
@@ -94,10 +95,10 @@ test('lãi thật của đơn theo giá vốn: đơn A về 40.394đ như màn S
 test('form theo thứ tự Doanh thu đơn hàng; tracking không gửi số tiền, mã đơn, tên', () => {
   assert.deepEqual(ORDER_FIELDS.buyer.map((f) => f.key), ['price', 'seller_voucher', 'ship_buyer', 'refund']);
   assert.deepEqual(ORDER_FIELDS.platform.map((f) => f.key), ['fixed_fee', 'service_fee', 'transaction_fee', 'piship', 'visibility', 'vat', 'pit', 'affiliate']);
-  const plan = readFileSync(path.join(APP, '..', 'docs', 'TRACKING_PLAN.md'), 'utf8');
+  const plan = readPlan();
   for (const e of ['order_check_started', 'order_check_completed', 'mismatch_reason_viewed', 'category_rate_updated_from_check', 'complaint_template_copied']) {
     assert.ok(EVENT_PARAMS[e], e);
-    assert.ok(plan.includes(`\`${e}\``), e);
+    assert.ok(plan.byName.has(e), e);
     for (const p of EVENT_PARAMS[e]) assert.ok(!/price|amount|order_id|name/.test(p), p);
   }
 });

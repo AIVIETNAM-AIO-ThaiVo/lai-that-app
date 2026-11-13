@@ -12,6 +12,7 @@ import {
 } from '../store.js';
 import { PAYWALL_TRIGGERS, paywallCopy, PLANS } from '../pro.js';
 import { EXAMPLES } from '../examples.js';
+import { readPlan } from './tracking-plan.mjs';
 
 const APP = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DAY = 86400000;
@@ -22,8 +23,7 @@ const ev = (s, name) => s.events.filter((e) => e.name === name);
 test('bật khoá Pro; 4 điểm paywall nằm trong tracking plan', () => {
   assert.equal(config.pro_gates_enabled, true);
   assert.deepEqual(PAYWALL_TRIGGERS, ['catalog_limit', 'fee_alert', 'flash_sale', 'settings']);
-  const plan = readFileSync(path.join(APP, '..', 'docs', 'TRACKING_PLAN.md'), 'utf8');
-  const line = plan.split('\n').find((l) => l.includes('`paywall_view`'));
+  const line = readPlan().byName.get('paywall_view').values;
   for (const t of PAYWALL_TRIGGERS) assert.ok(line.includes(t), t);
 });
 
