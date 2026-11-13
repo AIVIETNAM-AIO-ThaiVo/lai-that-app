@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Từ % lãi muốn có</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A7A6B}a:hover{color:#075E52}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 44px 20px 20px; background: #F6F7F9; color: #12161C; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; gap: 14px; font-variant-numeric: tabular-nums">
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 700">Tính lãi</h1>
+<span style="font-size: 13px; color: #5B6472">Móc khóa · Shopee 16%</span>
+</div>
+
+<div role="tablist" aria-label="Cách tính" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 12px; background: #E8EBEF">
+<button type="button" role="tab" aria-selected="false" style="height: 40px; border: 0; border-radius: 9px; background: transparent; font: inherit; font-size: 14px; font-weight: 500; color: #3A424E">Từ giá bán</button>
+<button type="button" role="tab" aria-selected="true" style="height: 40px; border: 0; border-radius: 9px; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #12161C; box-shadow: 0 1px 2px rgba(18,22,28,0.12)">Từ % lãi muốn có</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 600">Muốn lãi bao nhiêu % giá bán?</span><button type="button" style="border: 0; background: transparent; font: inherit; font-size: 13px; font-weight: 600; color: {{accent}}; padding: 8px 0">Nhập số tiền</button></div>
+<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px">
+<button type="button" style="height: 44px; border-radius: 12px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #12161C">10%</button>
+<button type="button" style="height: 44px; border-radius: 12px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #12161C">15%</button>
+<button type="button" aria-pressed="true" style="position: relative; height: 44px; border-radius: 12px; border: 0; background: #12161C; font: inherit; font-size: 15px; font-weight: 700; color: #FFFFFF">20%</button>
+<button type="button" style="height: 44px; border-radius: 12px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #12161C">25%</button>
+<button type="button" style="height: 44px; border-radius: 12px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #12161C">30%</button>
+</div>
+<span style="font-size: 12px; color: #5B6472">20% là mức nhiều shop chọn làm chuẩn</span>
+</div>
+
+<section style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 8px">
+<div style="border-radius: 16px; background: #E6F4F1; padding: 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 12px; font-weight: 600; color: #3A424E">Giá nên bán</span>
+<span style="font-size: 30px; font-weight: 700; color: {{accent}}">22.900đ</span>
+<span style="font-size: 12px; line-height: 1.4; color: #12161C">Lãi <b>5.018đ</b> · 21,9%<br>(tối thiểu 22.124đ, đã làm tròn)</span>
+</div>
+<div style="border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E6EB; padding: 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 12px; font-weight: 600; color: #3A424E">Hòa vốn</span>
+<span style="font-size: 24px; font-weight: 700">16.340đ</span>
+<span style="font-size: 12px; color: #5B6472">Bán dưới mức này là lỗ</span>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 4px 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; min-height: 44px; border-bottom: 1px solid #EEF0F3"><span style="font-size: 15px; font-weight: 600">Nếu chạy Flash Sale từ 22.900đ</span><span style="font-size: 11px; font-weight: 700; color: {{accent}}; background: #E6F4F1; padding: 3px 8px; border-radius: 8px">PRO</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; min-height: 44px; border-bottom: 1px solid #EEF0F3; font-size: 14px"><span>Giảm 10% → 20.610đ</span><b style="color: {{accent}}">3.267đ · Lãi 15,8%</b></div>
+<div style="display: flex; justify-content: space-between; align-items: center; min-height: 44px; border-bottom: 1px solid #EEF0F3; font-size: 14px"><span>Giảm 20% → 18.320đ</span><b style="color: {{thin}}">1.515đ · Mỏng 8,3%</b></div>
+<div style="display: flex; justify-content: space-between; align-items: center; min-height: 44px; font-size: 14px"><span>Giảm 30% → 16.030đ</span><b style="color: {{loss}}">−237đ · Lỗ</b></div>
+</section>
+
+<section style="display: flex; gap: 12px; align-items: flex-start; border-radius: 14px; padding: 12px 14px; background: #FFFFFF; border: 1px solid #E3E6EB">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12161C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 7h18M6 7l1 13h10l1-13M9 7V4h6v3"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 600">Giá nhập tối đa: 8.438đ</span>
+<span style="font-size: 13px; line-height: 1.45; color: #3A424E">Bán 22.900đ mà vẫn giữ lãi 20% thì chỉ được nhập tối đa mức này. Dùng để trả giá với nhà cung cấp.</span>
+</div>
+</section>
+
+<div style="flex: 1"></div>
+<button type="button" style="height: 50px; border-radius: 14px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600">Dùng giá 22.900đ</button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0A7A6B"},"thin":{"editor":"color","default":"#A16207"},"loss":{"editor":"color","default":"#C2410C"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0A7A6B', thin: this.props.thin ?? '#A16207', loss: this.props.loss ?? '#C2410C' };
+}
+}
+</script>
+</body>
+</html>

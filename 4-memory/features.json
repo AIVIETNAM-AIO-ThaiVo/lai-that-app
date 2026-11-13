@@ -1,0 +1,445 @@
+[
+  {
+    "id": "F1",
+    "title": "Bộ máy tính phí sàn (engine)",
+    "page": "1-wiki/features/F1-bo-may-tinh.md",
+    "done": [
+      "8 đơn Shopee thật trong `app/test/test_vectors.json`: tổng sàn trừ (phí + thuế + affiliate) lệch < 1% giá bán và ≤ 2đ.",
+      "Móc khóa Shopee (16%, vốn 8.000, bán 17.000, gói 1.500): lãi 505đ, trạng thái \"thin\", sàn + thuế 41%.",
+      "`priceForMargin`: hòa vốn 16.340đ, giá 20% = 22.124đ; `nicePrice(22124)` = 22.900; ở 22.900đ lãi 5.018đ.",
+      "TikTok Shop 13% cùng đầu vào: lãi 1.015đ; hòa vốn 15.724đ.",
+      "Áo thun (16,5%, vốn 60.000, bán 149.000, gói 3.000, hoàn 8%, mất 30.000/đơn hoàn): 41.061đ; bật Voucher Xtra: 33.521đ.",
+      "Nồi chiên 1.200.000đ bật Voucher Xtra: dòng voucher chạm trần 50.000đ. Mẫu số ≤ 0 → `priceForMargin` trả Infinity.",
+      "`formatVnd(17000)` = \"17.000đ\", `formatVnd(-1380)` = \"−1.380đ\"; làm tròn chỉ khi hiển thị."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:57.309Z"
+  },
+  {
+    "id": "F2",
+    "title": "Biểu phí, nguồn và miễn trừ",
+    "page": "1-wiki/features/F2-bieu-phi-nguon.md",
+    "done": [
+      "`loadPresets` chọn bản có `fee_version` mới hơn giữa remote và cache; remote lỗi thì dùng cache; không có cache thì dùng bản đóng gói (unit test).",
+      "`categoriesFor('shopee')` trả 31 ngành; ngành có `default: null` (TikTok \"Khác\", Lazada) bắt người dùng nhập % (unit test).",
+      "Mọi màn kết quả có `#fee-date` \"Biểu phí Shopee cập nhật 12/11/2026\" và câu \"không liên kết với sàn\".",
+      "Người dùng sửa được % ngành (`#category-rate`) và kết quả đổi theo ngay.",
+      "Màn Chi tiết phí có `#report-fee` \"Báo sai phí\" → ghi sự kiện `fee_report_sent` và hiện cảm ơn.",
+      "Event `fee_override {platform, field}` khi người dùng sửa phí."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:57.501Z"
+  },
+  {
+    "id": "F3",
+    "title": "Chọn sàn chính (onboarding)",
+    "page": "1-wiki/features/F3-chon-san.md",
+    "done": [
+      "Mở lần đầu thấy 4 lựa chọn `#pf-shopee` `#pf-tiktok_shop` `#pf-lazada` `#pf-multi` (role=radio); không có lựa chọn loại shop / Mall.",
+      "Chưa chọn sàn thì `#onboard-continue` bị vô hiệu; chọn rồi thì có `aria-checked=\"true\"`.",
+      "Mỗi lựa chọn ghi ngày biểu phí lấy từ biểu phí (ví dụ \"Biểu phí từ 23/05/2026 · 31 ngành\").",
+      "Có câu \"Ứng dụng độc lập, không liên kết với Shopee, TikTok hay Lazada\".",
+      "Tiếp tục → `#/tinh` với sàn đã chọn; tải lại trang vào thẳng `#/tinh` (nhớ lựa chọn). Máy cũ lỡ lưu Mall thì tự về shop thường.",
+      "Event `onboarding_completed {primary_platform}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:57.715Z"
+  },
+  {
+    "id": "F4",
+    "title": "Tính lãi từ giá bán",
+    "page": "1-wiki/features/F4-tinh-lai-tu-gia-ban.md",
+    "done": [
+      "Chọn ngành \"Sở thích & Sưu tầm\" (16%), gõ `#cost` 8000, `#price` 17000, `#pack` 1500 → `#profit` = \"505đ\", `#state-label` \"Lãi mỏng\", `#margin` \"3,0%\", `#breakeven` chứa \"16.340đ\" — **không có nút \"Tính\"**, kết quả đổi khi gõ.",
+      "Ô tiền tự chèn dấu chấm nghìn (\"17.000\"); khi đang gõ có thanh phụ với phím `000`.",
+      "Thẻ kết quả `#result` dính đáy màn (position sticky/fixed) và có `data-state` good/thin/loss.",
+      "Dải \"tiền đi đâu\" `#money-bar` có 3 đoạn: Sàn + thuế 41% · Vốn + gói 56% · Lãi 3%.",
+      "Mã giảm giá shop `#voucher` theo đ hoặc % (`#voucher-unit`) và ship người mua trả `#ship-buyer` làm đổi kết quả đúng công thức (đơn J: giảm 18.000đ).",
+      "Giá bán 12.000, vốn 6.000, 16,5% (Kẹp tóc) → \"Lỗ\", `#profit` \"−1.380đ\".",
+      "Nhớ sàn, ngành, giá vốn, đóng gói của lần trước sau khi tải lại.",
+      "Không có quảng cáo trên màn Tính lãi. Event `calc_completed` (debounce 1,5 giây) với `state`, `margin_bucket`, không có giá."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:57.901Z"
+  },
+  {
+    "id": "F5",
+    "title": "Tính từ % lãi muốn có (giá nên bán)",
+    "page": "1-wiki/features/F5-tinh-tu-phan-tram-lai.md",
+    "done": [
+      "Chạm `#mode-margin` (role=tab, aria-selected): có chip 10/15/20/25/30%, chip 20% chọn sẵn, ghi \"20% là mức nhiều shop chọn làm chuẩn\".",
+      "Móc khóa ở 20%: `#nice-price` \"22.900đ\", `#nice-profit` chứa \"Lãi 5.018đ\" và \"21,9%\" và \"tối thiểu 22.124đ\"; `#breakeven-margin` \"16.340đ\".",
+      "Nhập số tiền lãi mong muốn thay cho % (`#margin-amount-toggle` → `#target-amount` 5000) ra giá nên bán tương ứng.",
+      "Mức lãi không thể đạt (mẫu số ≤ 0) hiện \"Không thể đạt mức lãi này\".",
+      "`#apply-price` \"Dùng giá 22.900đ\" → về tab Từ giá bán với `#price` = 22.900 và lãi 5.018đ; event `nice_price_applied {target_margin}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:58.115Z"
+  },
+  {
+    "id": "F6",
+    "title": "Chi tiết phí (\"17.000đ đi đâu?\")",
+    "page": "1-wiki/features/F6-chi-tiet-phi.md",
+    "done": [
+      "`#to-breakdown` mở màn có tiêu đề \"17.000đ đi đâu?\" và `#take-rate` \"Sàn + thuế lấy 6.995đ, tức 41% giá bán\".",
+      "Các `.fee-line`: Phí cố định ngành 16% −2.720đ · Phí xử lý giao dịch 6% −1.020đ · Phí hạ tầng −3.000đ · Thuế 1,5% −255đ · Đóng gói −1.500đ · Giá vốn −8.000đ; `#remaining` \"Còn lại: lãi mỏng 505đ\".",
+      "Nút `.fee-info` (i) mở `.fee-basis` ghi cách tính + nguồn + ngày áp dụng; event `fee_info_opened {fee_key}`.",
+      "Công tắc `#prog-voucher_xtra`, `#prog-piship`, `#prog-visibility`, `#tax-vat`, `#tax-pit` đổi kết quả ngay (bật PiShip → lãi giảm 2.700đ); event `program_toggled`.",
+      "Sửa % giao dịch `#rate-transaction` và phí mỗi đơn `#fixed-per-order` được (TikTok/Lazada ghi \"chưa đối chiếu đủ đơn thật\"); TikTok có `#registered` (đã đăng ký MST: chia 1,1).",
+      "Event `fee_breakdown_opened {platform}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:41:58.333Z"
+  },
+  {
+    "id": "F7",
+    "title": "So sánh sàn",
+    "page": "1-wiki/features/F7-so-sanh-san.md",
+    "done": [
+      "Cùng móc khóa (vốn 8.000, bán 17.000, gói 1.500): `.compare-card[data-platform=tiktok_shop]` lãi 1.015đ \"Lãi mỏng · 6,0%\", Shopee 505đ \"Lãi mỏng · 3,0%\"; sàn lãi hơn đứng đầu.",
+      "Thẻ kém hơn ghi chênh lệch \"kém 510đ/đơn\".",
+      "Lazada chưa có % hoa hồng thì có ô `#lazada-rate` để nhập; nhập rồi mới hiện lãi Lazada.",
+      "`#compare-orders` 300 đơn/tháng → `#compare-monthly` \"chênh nhau 153.000đ\".",
+      "Ghi chú TikTok: \"Phí TikTok tính cho shop chưa đăng ký MST … Sửa trong từng dòng phí\".",
+      "Event `compare_viewed {best_platform, platforms_count}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:52:13.198Z"
+  },
+  {
+    "id": "F8",
+    "title": "Chi phí ẩn: hoàn hàng, voucher, quảng cáo",
+    "page": "1-wiki/features/F8-chi-phi-an.md",
+    "done": [
+      "Áo thun nữ (Thời Trang Nữ 16,5%, vốn 60.000, bán 149.000, gói 3.000): chỉ phí sàn 47.240đ; bật `#hc-return` 8%, mất 30.000đ/đơn hoàn → 41.061đ.",
+      "Bật thêm `#hc-voucher` (Voucher Xtra) → `#hc-profit` \"33.521đ\" \"Lãi · 22,5%\", `#hc-diff` \"Thấp hơn 13.719đ so với chỉ tính phí sàn\".",
+      "`#roas-breakeven` \"4,09\" và `#max-ads` \"36.436đ/đơn\"; khi tắt voucher là 3,34 và 44.631đ.",
+      "Bật `#hc-ads` với `#roas` 8 thì lãi trừ thêm 149.000/8 mỗi đơn; `#affiliate-rate` % trừ trên giá sau mã giảm giá.",
+      "Chi phí ẩn lưu theo sản phẩm đang tính và áp vào màn Tính lãi; event `hidden_costs_set {has_return_rate, has_roas, has_affiliate}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:52:13.393Z"
+  },
+  {
+    "id": "F9",
+    "title": "Flash Sale & giá nhập tối đa",
+    "page": "1-wiki/features/F9-flash-sale-gia-nhap.md",
+    "done": [
+      "Móc khóa ở giá 22.900đ: `#flash-sale` có 3 `.flash-row`: giảm 10% → 20.610đ lãi 3.267đ (15,8%) · 20% → 18.320đ 1.515đ \"Mỏng 8,3%\" · 30% → 16.030đ −237đ \"Lỗ\".",
+      "`#max-cost` \"Giá nhập tối đa: 8.438đ\" để vẫn giữ lãi 20% ở giá 22.900đ.",
+      "`isLocked('flash_sale', state, config)`: khoá khi `pro_gates_enabled` bật và chưa Pro/chưa xem quảng cáo thưởng; mở khi tắt cờ (unit test).",
+      "Event `flash_sale_viewed {unlock_method}` và `max_cost_viewed {unlock_method}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:52:13.571Z"
+  },
+  {
+    "id": "F10",
+    "title": "Danh mục sản phẩm",
+    "page": "1-wiki/features/F10-danh-muc.md",
+    "done": [
+      "Tính nhanh `#save-product` → nhập tên `#product-name` → `#save-confirm` lưu thành sản phẩm mới (đầu vào đầy đủ) vào máy; còn sau khi tải lại.",
+      "Danh mục sắp **lãi thấp nhất lên đầu**: Kẹp tóc −1.380đ (Lỗ −11,5%) · Ốp điện thoại −125đ (Lỗ −0,5%) · Móc khóa 505đ (Lãi mỏng 3,0%) · Áo thun 41.061đ.",
+      "Sản phẩm lỗ / lãi mỏng có `.suggested` \"gợi ý 18.900đ\" (giá đẹp giữ lãi 20%).",
+      "Bộ lọc `#filter-all` / `#filter-loss` \"Đang lỗ · 2\" / `#filter-thin` \"Lãi mỏng · 1\".",
+      "`#catalog-count` \"4/5 miễn phí\"; `canSave` chặn sản phẩm thứ 6 khi `pro_gates_enabled` bật (unit test).",
+      "Chạm một sản phẩm mở màn chi tiết sản phẩm (F19) với đúng đầu vào; event `product_saved {catalog_size, state}`, `catalog_sorted_alert {loss_count_bucket}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:41:44.010Z"
+  },
+  {
+    "id": "F11",
+    "title": "Báo động khi sàn đổi phí",
+    "page": "1-wiki/features/F11-bao-dong-doi-phi.md",
+    "done": [
+      "`diffCatalog(products, oldPresets, newPresets)` trả danh sách sản phẩm chuyển từ lãi sang lỗ kèm giá gợi ý mới (unit test).",
+      "Nhận biểu phí mới (`window.__app.receivePresets(json)`, cùng đường với tải từ máy chủ) có `fee_version` mới → `#fee-alert` trên Danh mục: \"Biểu phí Shopee mới đã áp dụng · 1 sản phẩm chuyển sang lỗ\".",
+      "Có thông báo: bản ghi trong `#notif-inbox` (Cài đặt) và Web Notification nếu đã bật `#alerts-toggle` và được cấp quyền.",
+      "`#fee-alert-action` \"Xem giá đề xuất\" lọc ra sản phẩm vừa chuyển lỗ với giá gợi ý mới.",
+      "Cùng `fee_version` thì không báo lại; `#fee-version` ở Cài đặt hiện phiên bản đang dùng.",
+      "Event `fee_table_updated {fee_version, products_turned_loss}` và `fee_alert_opened {fee_version, is_pro}`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:52:13.954Z"
+  },
+  {
+    "id": "F12",
+    "title": "Tracking theo TRACKING_PLAN",
+    "page": "1-wiki/features/F12-tracking.md",
+    "done": [
+      "`EVENTS` trong code đúng bằng danh sách sự kiện của `docs/TRACKING_PLAN.md`; `track` từ chối tên lạ (unit test đọc file plan).",
+      "`track` loại thuộc tính không có trong plan cho sự kiện đó và không bao giờ ghi giá, giá vốn, tên sản phẩm (unit test).",
+      "`marginBucket`: <0 / 0–5 / 5–10 / 10–20 / >20 đúng ngưỡng.",
+      "`calc_completed` chỉ ghi 1 lần cho một bộ đầu vào, sau khi ngừng gõ 1,5 giây (unit test với đồng hồ giả).",
+      "Trên bot: một lượt dùng đi qua phễu `onboarding_completed → calc_completed → product_saved`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T16:52:14.212Z"
+  },
+  {
+    "id": "F13",
+    "title": "Mô phỏng lãi tháng theo số đơn",
+    "page": "1-wiki/features/F13-lai-thang.md",
+    "done": [
+      "`monthlyProfit(505, 300)` = 151.500; số đơn rỗng/âm → 0 (unit test).",
+      "Trên màn Tính lãi, gõ `#orders-month` 300 với móc khóa → `#monthly-profit` \"Lãi tháng ≈ 151.500đ\".",
+      "Lãi tháng âm hiện màu và chữ \"Lỗ tháng ≈ …\".",
+      "Số đơn/tháng được nhớ theo sản phẩm khi lưu vào danh mục."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:00:08.455Z"
+  },
+  {
+    "id": "F14",
+    "title": "Chia sẻ kết quả qua Zalo",
+    "page": "1-wiki/features/F14-chia-se-zalo.md",
+    "done": [
+      "`shareText(...)` gồm: sàn + ngành, giá bán, giá vốn, lãi mỗi đơn + trạng thái + %, sàn + thuế %, giá nên bán 20%, \"Biểu phí cập nhật 12/11/2026\", \"Tính bằng Lãi Thật\" (unit test).",
+      "`#share-result` trên điện thoại mở bảng chia sẻ của máy (chọn Zalo); máy không chia sẻ được thì chép vào bộ nhớ tạm và `#toast` \"Đã chép kết quả, dán vào Zalo\".",
+      "Event `share_result {channel}` (zalo / other — chép vào bộ nhớ tạm tính là other), không có giá trong thuộc tính."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:00:08.663Z"
+  },
+  {
+    "id": "F15",
+    "title": "Ví dụ mẫu lần đầu",
+    "page": "1-wiki/features/F15-vi-du-mau.md",
+    "done": [
+      "Lần đầu vào Tính lãi (chưa nhập gì) có `#examples` với 3 ví dụ: Móc khóa 17.000đ · Áo thun 149.000đ · Kẹp tóc 12.000đ.",
+      "Chạm \"Móc khóa\" điền đủ ô (Sở thích & Sưu tầm, vốn 8.000, bán 17.000, gói 1.500) → `#profit` 505đ; khối ví dụ ẩn khi đã có số.",
+      "Danh mục trống có `#catalog-empty` + `#load-examples` \"Thêm 4 sản phẩm mẫu\" → thêm Kẹp tóc, Ốp điện thoại, Móc khóa, Áo thun (đánh dấu \"mẫu\").",
+      "`EXAMPLES` trong code khớp ca của `engine/test-cases.md` (unit test)."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:00:08.869Z"
+  },
+  {
+    "id": "F16",
+    "title": "Áp giá gợi ý 1 chạm cho nhiều sản phẩm",
+    "page": "1-wiki/features/F16-ap-gia-hang-loat.md",
+    "done": [
+      "`applySuggested(products, ids, presets)` đổi giá các sản phẩm đã chọn sang giá gợi ý (giá đẹp giữ lãi 20%), giữ nguyên đầu vào khác (unit test).",
+      "Trên Danh mục: `#bulk-mode` → chọn các sản phẩm đang lỗ (mặc định chọn sẵn) → `#apply-suggested` \"Áp giá gợi ý cho 2 sản phẩm\".",
+      "Sau khi áp: Kẹp tóc 18.900đ, Ốp điện thoại 34.900đ; không còn sản phẩm lỗ; `#toast` báo số sản phẩm đã đổi giá; hoàn tác được trong 5 giây (`#undo-apply`)."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:00:09.069Z"
+  },
+  {
+    "id": "F17",
+    "title": "Nhắc mùa sale",
+    "page": "1-wiki/features/F17-nhac-mua-sale.md",
+    "done": [
+      "`nextSale(new Date('2026-11-12'))` → 12/12/2026, còn 30 ngày; `nextSale(2026-12-13)` → 01/01/2027 (unit test).",
+      "`saleReminderDue(today, sale)` đúng khi còn ≤ 3 ngày (unit test).",
+      "Cài đặt có `#sale-reminders` (bật/tắt) và dòng \"Sale gần nhất: 12.12 · còn 30 ngày\".",
+      "Khi đến hạn nhắc: `#sale-banner` trên Danh mục \"Còn 3 ngày tới 12.12 — kiểm tra giá Flash Sale\" + mục trong hộp thông báo."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:00:09.276Z"
+  },
+  {
+    "id": "F18",
+    "title": "Miễn phí cố định 30 ngày cho shop mới",
+    "page": "1-wiki/features/F18-shop-moi.md",
+    "done": [
+      "Không còn lựa chọn Mall ở màn Chọn sàn, sheet chọn sàn, chip sàn (\"Shopee\", không kèm \"Shop thường\"); không có `#mall-hint` / `#mall-note`.",
+      "Cài đặt có `#new-shop` \"Shop mới (miễn phí cố định 30 ngày, tối đa 200 đơn)\" — chỉ Shopee; bật thì phí cố định ngành = 0: móc khóa lãi 3.225đ.",
+      "`ratesFor` bỏ phí ngành khi `newShopPromo` bật và sàn có `new_seller_promo` (unit test)."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T06:08:31.985Z"
+  },
+  {
+    "id": "F19",
+    "title": "Tách Tính nhanh và Sản phẩm",
+    "page": "1-wiki/features/F19-tach-tinh-nhanh-san-pham.md",
+    "done": [
+      "Tab Tính có tiêu đề \"Tính nhanh\", không có tên sản phẩm, không có nút \"+ Sản phẩm mới\"; `#save-product` \"Lưu thành sản phẩm\" luôn tạo sản phẩm **mới** (lưu 2 lần → 2 sản phẩm).",
+      "Chạm một sản phẩm trong danh mục → `#/san-pham/<id>`: tiêu đề là tên sản phẩm, có nút quay lại danh mục, tab \"Sản phẩm\" đang sáng.",
+      "Sửa giá ở màn sản phẩm không đổi số trong Tính nhanh, và ngược lại.",
+      "`#product-save` \"Lưu thay đổi\" chỉ bấm được khi có thay đổi; lưu xong danh mục hiện lãi mới.",
+      "Rời màn sản phẩm khi chưa lưu → hỏi: `#leave-save` \"Lưu\" / `#leave-discard` \"Bỏ thay đổi\".",
+      "`#product-delete` (bấm 2 lần) xoá sản phẩm và về danh mục; `#product-to-calc` \"Thử trong Tính nhanh\" chép số sang Tính nhanh (không gắn).",
+      "Chi tiết phí / Chi phí ẩn mở từ màn sản phẩm (`#/san-pham/<id>/chi-tiet`, `/chi-phi-an`) sửa đúng sản phẩm đó và quay lại đúng màn.",
+      "Unit: `productToCalc`, `updateProduct` (đổi tên + đầu vào, giữ id, không ghi `product_saved`)."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T17:41:44.205Z"
+  },
+  {
+    "id": "F20",
+    "title": "Màn mở app có logo động (tách kiểu chất lỏng)",
+    "page": "1-wiki/features/F20-man-mo-app.md",
+    "done": [
+      "Mở app thấy `#splash` (nền xanh lãi) có logo; lúc đầu là **một khối liền**, mảnh phí tách ra với **cầu nối chất lỏng** (bộ lọc SVG `#splash-goo`: làm mờ + ngưỡng alpha) rồi đứt; chữ \"Lãi Thật\" hiện dần; tự ẩn, gỡ hẳn sau ≤ 1,5 giây.",
+      "Bộ lọc là tĩnh; chỉ `transform` / `opacity` được animate (unit test đọc CSS). Mảnh phí có ≥ 20 khung khoá (chuyển động hữu cơ).",
+      "Góc bo giữ nguyên từ đầu tới cuối (phản hồi 13/11: \"cạnh đang bo tròn nhọn đột ngột\"): không đổi sang lớp góc nhọn ở cuối — không có `.splash-crisp`; góc trong của chữ L giữ bo tròn của lớp chất lỏng. Giảm chuyển động cũng hiện đúng hình bo tròn đó (đứng yên).",
+      "Chạm vào màn mở app thì ẩn ngay; không có nút; không chặn app tải phía sau.",
+      "Bật giảm chuyển động (`prefers-reduced-motion`): không chuyển động, hiện logo ở trạng thái cuối, ẩn sau ≤ 0,5 giây (`splashTiming`).",
+      "Có bản Lottie `brand/logo/motion/splash-liquid.json` qua `validate_lottie.py` của skill wiggle + ảnh GIF xem trước; keyframes CSS sinh từ cùng một hàm chuyển động (`brand/logo/motion/build_splash.py`).",
+      "Logo chỉ xuất hiện ở màn mở app và màn Chọn sàn; màn Cài đặt **không** có logo."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T18:10:17.430Z"
+  },
+  {
+    "id": "F21",
+    "title": "Thêm sản phẩm ngay trong danh mục",
+    "page": "1-wiki/features/F21-them-san-pham.md",
+    "done": [
+      "Danh mục có `#add-product` \"Thêm sản phẩm\" — cả khi đã có sản phẩm lẫn khi danh mục trống — mở `#/san-pham/moi`.",
+      "Màn `#/san-pham/moi`: tiêu đề \"Sản phẩm mới\", nút quay lại danh mục, tab \"Sản phẩm\" đang sáng; ô tên `#product-name-edit` trống; giá bán / giá vốn trống (không chép số từ Tính nhanh); sàn = sàn đang dùng ở Tính nhanh, giữ thiết lập shop (thuế, chương trình).",
+      "Nhập giá → kết quả lãi hiện ngay như Tính nhanh.",
+      "`#product-create` \"Thêm vào danh mục\" chỉ bấm được khi có tên **và** giá bán (và đã có % phí ngành hàng); bấm → về `#/san-pham`, sản phẩm mới có trong danh sách với lãi đúng; Tính nhanh giữ nguyên số cũ.",
+      "Rời màn khi đã nhập mà chưa thêm → hỏi `#leave-discard` \"Bỏ\" / `#leave-save` \"Thêm\" (chỉ bấm được khi đủ tên + giá).",
+      "Unit: `newProductCalc(state)` (trống giá/vốn/ngành, giữ sàn + thiết lập shop), `createReady(name, calc)`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T18:01:25.200Z"
+  },
+  {
+    "id": "F22",
+    "title": "Lãi của mỗi sản phẩm trên mọi sàn bạn bán",
+    "page": "1-wiki/features/F22-lai-theo-tung-san.md",
+    "done": [
+      "Cài đặt có \"Sàn bạn bán\": `#sell-shopee` `#sell-tiktok_shop` `#sell-lazada` (bật/tắt, không tắt được sàn cuối cùng). Onboarding \"Nhiều sàn\" → cả 3 bật.",
+      "Danh mục: mỗi thẻ sản phẩm có một dòng cho **từng sàn đang bán** (`.channel-row[data-platform]`): tên sàn, lãi mỗi đơn, chữ trạng thái (Lãi / Lãi mỏng / Lỗ); sàn chưa đủ % phí ghi \"cần % phí\".",
+      "Sắp xếp và bộ lọc \"Đang lỗ\" / \"Lãi mỏng\" tính theo sàn **tệ nhất** của sản phẩm (lỗ ở một sàn là vào nhóm \"Đang lỗ\").",
+      "Màn sản phẩm (và Sản phẩm mới) có thẻ `#channels` \"Lãi trên các sàn bạn bán\"; chạm một sàn phụ → `#channel-sheet` sửa ngành hàng, % phí, giá bán trên sàn đó; lưu sản phẩm thì giữ các kênh.",
+      "Lãi từng sàn khớp màn So sánh với cùng ngành / % phí (cùng một hàm dựng đầu vào theo sàn).",
+      "Báo động đổi phí (F11) xét mọi sàn đang bán: sản phẩm chuyển sang lỗ ở bất kỳ sàn nào đều được báo.",
+      "Unit: `sellPlatforms`, `channelInput`, `catalogView(…, platforms)` (kênh, sàn tệ nhất, lọc), `diffCatalog(…, platforms)`, `updateProduct` giữ kênh."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-12T18:10:17.645Z"
+  },
+  {
+    "id": "F23",
+    "title": "Áp giá gợi ý theo từng sàn (chọn sàn)",
+    "page": "1-wiki/features/F23-ap-gia-goi-y-theo-san.md",
+    "done": [
+      "Bán ≥ 2 sàn: bấm `#bulk-mode` thấy hàng \"Áp cho sàn\" `#apply-on-shopee` `#apply-on-tiktok_shop` `#apply-on-lazada` (chỉ các sàn đang bán; mặc định chọn hết; bỏ chọn được nhưng luôn còn ít nhất 1). Bán 1 sàn: như F16, không có hàng này.",
+      "Mỗi thẻ hiện từng sàn đã chọn: giá hiện tại → giá gợi ý (`.channel-row .suggested`); sàn đang Lãi (tốt) giữ giá; sàn chưa có % phí bỏ qua.",
+      "Chọn sẵn sản phẩm đang lỗ ở sàn đã chọn; ô chọn bị khoá nếu không sàn đã chọn nào có giá gợi ý. Đổi lựa chọn sàn thì bỏ chọn sản phẩm không còn gì để áp.",
+      "`#apply-suggested` \"Áp giá gợi ý cho N sản phẩm\" chỉ đổi giá trên sàn đã chọn: sàn chính đổi giá sản phẩm, sàn phụ đổi giá riêng của sàn đó; sàn không chọn giữ nguyên. Toast ghi tên sàn; hoàn tác được (`#undo-apply`).",
+      "Unit: `applySuggested(state, ids, presets, now, { platforms, lazadaRate })`; `channelsView` có `sugPrice` cho sàn chưa lãi tốt."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T01:42:09.528Z"
+  },
+  {
+    "id": "F24",
+    "title": "Lãi Thật Pro: paywall 4 điểm, 2 gói, dùng thử 3 ngày",
+    "page": "1-wiki/features/F24-lai-that-pro.md",
+    "done": [
+      "Paywall ghi: giá + chu kỳ của 2 gói (`#plan-monthly` 49.000đ/tháng, dùng thử 3 ngày; `#plan-yearly` 299.000đ/năm), **tự gia hạn**, **cách huỷ** (Google Play › Thanh toán và gói đăng ký), nhắc trước 1 ngày khi hết dùng thử, nút `#restore` \"Khôi phục giao dịch\", nút đóng `#paywall-close`. Có câu miễn trừ \"không liên kết\".",
+      "Đúng 4 điểm kích hoạt ở trên; mỗi lần hiện ghi `paywall_view {trigger}`. Màn Tính lãi không tự bật paywall.",
+      "Gói tháng → dùng thử 3 ngày (`trial_started {plan}`), Pro mở ngay; hết dùng thử mà không huỷ → thành thuê bao (`purchase {plan, price, trigger}`). Gói năm → `purchase` ngay.",
+      "Còn ≤ 1 ngày dùng thử → 1 thông báo (hộp thông báo + Web Notification nếu đã cho phép): \"Ngày mai hết dùng thử…\" kèm giá và cách huỷ; chỉ nhắc 1 lần.",
+      "Pro: lưu > 5 sản phẩm, xem chi tiết báo động, Flash Sale mở, không quảng cáo; Cài đặt hiện gói, trạng thái, ngày hết dùng thử / gia hạn, cách huỷ.",
+      "`#restore` khôi phục giao dịch đã mua (chế độ thử: từ bản ghi trên máy).",
+      "Unit: `isPro`, `startSubscription`, `settleSubscription`, `trialReminderDue`, `restoreSubscription`, `paywallCopy`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T02:19:14.118Z"
+  },
+  {
+    "id": "F25",
+    "title": "Quảng cáo + đồng ý (luật hiển thị; khung thử trên web)",
+    "page": "1-wiki/features/F25-quang-cao-dong-y.md",
+    "done": [
+      "Đồng ý quảng cáo (vai trò UMP): lần đầu sắp có quảng cáo, thẻ `#ad-consent` hỏi \"Quảng cáo cá nhân hoá?\" — `#consent-yes` / `#consent-no` (không chặn màn hình); đổi lại được ở Cài đặt `#ad-consent-change`. Chưa trả lời thì chưa hiện quảng cáo.",
+      "Banner `.ad-banner[data-placement]` chỉ ở Danh mục (`catalog`) và Cài đặt › Biểu phí (`fees`); không bao giờ ở `#/tinh`, Chi tiết phí, So sánh, Chọn sàn, màn sản phẩm. Ghi `ad_impression {format: banner, placement}` 1 lần mỗi lượt vào màn.",
+      "Interstitial `#interstitial`: chỉ khi chuyển sang màn khác Tính lãi, sau ≥ 3 lần `calc_completed` từ lần trước, cách lần trước ≥ 180 giây, phiên thứ 3 trở đi; có nút `#interstitial-close` (đóng được sau vài giây); `ad_impression {format: interstitial}`.",
+      "Rewarded: thẻ Flash Sale đang khoá có `#watch-ad` \"Xem quảng cáo để mở\"; xem hết (`#rewarded`) → mở Flash Sale + giá nhập tối đa trong phiên này, ghi `rewarded_ad_complete {reward: flash_sale}` và `flash_sale_viewed {unlock_method: rewarded}`.",
+      "Pro: không banner, không interstitial, không cần rewarded.",
+      "Unit: `interstitialDue`, `bannerAllowed`, `adsActive`."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T02:33:05.512Z"
+  },
+  {
+    "id": "F26",
+    "title": "Phát hành: chính sách quyền riêng tư, bộ ảnh store, gói Android, video demo",
+    "page": "1-wiki/features/F26-phat-hanh.md",
+    "done": [
+      "`app/privacy.html` (từ `docs/privacy-policy.html`, cập nhật mục quảng cáo + mua trong ứng dụng), mở từ Cài đặt `#privacy-link`; chạy offline (có trong service worker).",
+      "`brand/store/`: icon 512×512, ảnh đồ hoạ 1024×500 (nền #12161C, chữ trắng \"Lãi Thật\" + \"505đ · Lãi mỏng 3,0%\" màu #A16207, không logo sàn), 6–8 ảnh chụp điện thoại 1080×1920 có chú thích, sinh lại được bằng một lệnh.",
+      "Gói Android: `mobile/` (Capacitor, ADR-002) + `mobile/README.md` các bước ra AAB và tải lên Internal testing (chi tiết ở F27).",
+      "Video demo theo `docs/DEMO_VIDEO_SCRIPT.md` (quay tự động màn hình app 390px, chữ chú thích trên màn), lưu ở `brand/video/`.",
+      "`docs/LAUNCH_CHECKLIST.md` đánh dấu việc đã xong / việc còn cần nhóm làm."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T02:31:22.783Z"
+  },
+  {
+    "id": "F27",
+    "title": "Gói Android bằng Capacitor: AdMob + Google Play Billing gốc",
+    "page": "1-wiki/features/F27-goi-android-capacitor.md",
+    "done": [
+      "`isNative(win)` chỉ đúng khi `window.Capacitor.isNativePlatform()` là true; trên web không gọi plugin nào.",
+      "Quảng cáo trong app (`AdMob`): bảng đồng ý UMP (`requestConsentInfo` → `showConsentForm` khi `REQUIRED`) rồi `initialize`; banner thích ứng `BOTTOM_CENTER` nằm trên thanh điều hướng, **chỉ** khi vào Danh mục / Cài đặt (theo `bannerPlacement`), rời màn thì `hideBanner`; interstitial / rewarded dùng `prepare…` + `show…`; rewarded chỉ mở Flash Sale khi plugin trả phần thưởng; `npa` theo lựa chọn \"Không cá nhân hoá\". ID quảng cáo **thử** của Google cho tới bản phát hành (`app_config.admob`).",
+      "Thanh toán trong app (`NativePurchases`): mua `pro_monthly` / `pro_yearly` với `productType: 'subs'` + `planIdentifier` từ `app_config`; khôi phục từ `getPurchases` (thuê bao đang chạy); lỗi / huỷ → không đổi trạng thái.",
+      "Biểu phí mới trong app tải từ `app_config.fee_presets_url` (URL đăng web); chưa có URL thì dùng bản đóng gói như cũ.",
+      "`mobile/`: `capacitor.config.json` (`appId: vn.laithat.app`, `webDir: www`), `package.json` ghim Capacitor 8 + `@capacitor-community/admob` + `@capgo/native-purchases`; `npm run sync` chép `../app` vào `www/` **bỏ** `tests/`, `test/`, `e2e.mjs` rồi `cap sync android`.",
+      "`mobile/android/` đã tạo (`cap add android`): `applicationId vn.laithat.app`, AdMob App ID (ID thử) trong `AndroidManifest.xml`, 2 plugin được nhận; biểu tượng + màn chờ là logo Lãi Thật (không còn ảnh mặc định Capacitor, `scripts/android_assets.py`).",
+      "`mobile/README.md`: cài, sync, build AAB (`bundleRelease`), Internal testing, sản phẩm thuê bao + base plan, đổi sang ID quảng cáo thật khi phát hành.",
+      "`app/` vẫn không import thư viện npm nào (unit test đọc mã nguồn).",
+      "Unit: cầu nối quảng cáo / thanh toán với plugin giả (đúng hàm, đúng tham số, banner chỉ ở 2 màn, rewarded cần phần thưởng)."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T02:31:22.984Z"
+  },
+  {
+    "id": "F28",
+    "title": "Combo: bán theo bộ, so với bán lẻ, giảm tối đa",
+    "page": "1-wiki/features/F28-combo.md",
+    "done": [
+      "Engine `combo`, `separate`, `comboMaxDiscount`, `comboPriceForMargin` khớp mọi ca combo + giảm tối đa trong `app/test/addon_vectors.json` (CB2–CB7, CB4) tới 0,5đ; giảm 100% / giá ≤ 0 → báo lỗi nhập (CB8).",
+      "Tab Tính có chip thứ ba **Combo** (nhãn PRO) cạnh \"Từ giá bán\", \"Từ % lãi\" → `#/combo`. Danh mục có nút `#make-combo` \"Tạo combo\" khi đã lưu ≥ 2 sản phẩm.",
+      "**Miễn phí (C0):** `#/combo` hiện ví dụ mẫu 3 móc khóa giảm 10%: giá 45.900đ, lãi 6.614đ · 14,4%, dòng \"Bán lẻ 3 đơn: 1.515đ · Combo +5.099đ\" — chỉ xem; chạm sửa ô nào cũng mở paywall (`paywall_view {trigger: combo_tab}`).",
+      "**Pro (C1–C3):** dựng combo 2–5 món: thêm từ danh mục (`#add-item` → sheet chọn sản phẩm đã lưu, giá vốn/ngành tự điền) hoặc nhập nhanh; số lượng `−/+` từng dòng; chế độ `#combo-mode-promo` Khuyến mãi combo / `#combo-mode-addon` Mua kèm / `#combo-mode-bundle` Sản phẩm bộ; kiểu giảm 3 tab `#disc-percent` · `#disc-amount` · `#disc-fixed`; Shopee báo khi dưới mức tối thiểu (giảm 5% hoặc 10.000đ, từ 2 sản phẩm). Đóng gói, ship người mua trả tính 1 lần.",
+      "**Kết quả dính đáy (C4–C5):** lãi combo + % + chữ trạng thái; \"Bán lẻ N đơn: X · Combo ±Y\"; \"Sàn + thuế lấy A% thay vì B% khi bán lẻ\"; nút \"Xem chi tiết\".",
+      "**Chi tiết (C6):** bảng phí có nhãn \"mỗi SP\" / \"mỗi đơn\"; giảm tối đa giữ lãi 20% / 10% / hòa vốn (làm tròn **xuống** % nguyên); dưới mức tối thiểu của sàn thì nói rõ lãi ở mức 5%; giá combo gợi ý giữ lãi 20% (làm tròn **lên** giá đẹp).",
+      "**Lưu (C7):** `#combo-save` → Danh mục có dòng nhãn \"Bộ · N món\"; món lấy từ danh mục liên kết theo id: sửa giá vốn sản phẩm thì combo tính lại; xoá sản phẩm thì combo giữ bản sao và ghi \"món gốc đã xoá\". Báo động đổi phí và sắp xếp lãi thấp dùng chung. Hết Pro: combo đã lưu vẫn hiện (chỉ xem).",
+      "Tracking: `combo_built`, `combo_vs_separate_viewed`, `combo_max_discount_viewed`, `combo_saved` đúng tham số trong `docs/TRACKING_PLAN.md`; không gửi giá, tên sản phẩm. Không quảng cáo trên màn combo."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T05:13:25.098Z"
+  },
+  {
+    "id": "F29",
+    "title": "Kiểm tra đơn: nhập tay 1 đơn, so từng khoản, chẩn đoán, sửa ngay",
+    "page": "1-wiki/features/F29-kiem-tra-don.md",
+    "done": [
+      "`checkOrder` khớp mọi ca KD1–KD6 trong `app/test/addon_vectors.json` (trạng thái, số khoản lệch, tổng lệch, trạng thái + lý do từng dòng). Ngưỡng: Khớp nếu |lệch| ≤ 1đ × số sản phẩm + 1đ; Lệch nhỏ nếu ≤ 100đ và ≤ 1%; còn lại Lệch; đơn có hoàn tiền/điều chỉnh là \"Có điều chỉnh\".",
+      "`#/kiem-tra`: chọn sản phẩm đã lưu (`#check-product`, để biết ngành + chương trình) hoặc gõ % ngành; form đúng thứ tự màn Doanh thu đơn hàng của Shopee: NGƯỜI MUA TRẢ (giá sản phẩm, mã giảm giá shop, ship khách trả, hoàn tiền) · SÀN TRỪ (phí cố định, phí dịch vụ, phí giao dịch, PiShip, phí hiển thị, thuế GTGT, thuế TNCN, hoa hồng tiếp thị liên kết); ô trống là 0; `#check-run` \"Kiểm tra\" luôn bấm được khi có giá.",
+      "`#/kiem-tra/ket-qua`: dải trạng thái trên cùng (Khớp / Lệch nhỏ / \"Lệch N khoản · sàn trừ nhiều hơn X\" / Có điều chỉnh) + câu trung tính \"So với biểu phí bạn đang dùng…\"; bảng **Khoản · Sàn trừ · Biểu phí · Lệch**; dòng lệch có câu chẩn đoán ngay dưới và nút hành động: Cập nhật ngành X% · Bật Voucher Xtra · Bật phí hiển thị · Bật PiShip · Tắt/Bật GTGT.",
+      "Bấm nút hành động mới đổi cài đặt của sản phẩm đã lưu (không tự sửa); kiểm tra lại ngay → dòng đó Khớp; danh mục và báo động tính lại.",
+      "`#copy-complaint` \"Sao chép nội dung khiếu nại\": mã đơn (người dùng gõ), khoản phí, số đã trừ, số theo biểu phí kèm ngày áp dụng, chênh lệch; giọng trung tính, người bán tự gửi.",
+      "Cuối màn: lãi thật của đơn theo giá vốn đã lưu so với lãi dự tính.",
+      "Tracking: `order_check_started`, `order_check_completed`, `mismatch_reason_viewed`, `category_rate_updated_from_check`, `complaint_template_copied` đúng tham số; không gửi số tiền, mã đơn, tên sản phẩm. Không quảng cáo trên màn nhập đơn."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T05:13:25.329Z"
+  },
+  {
+    "id": "F30",
+    "title": "Kiểm tra cả file Báo Cáo Doanh Thu (Shopee .xlsx)",
+    "page": "1-wiki/features/F30-kiem-tra-file.md",
+    "done": [
+      "`readXlsx(bytes)` đọc được file .xlsx (zip stored/deflate, sharedStrings, nhiều trang); `parseIncome(sheets)` tìm trang Income, dòng tiêu đề và các cột bắt buộc theo tên (Mã đơn hàng, Giá sản phẩm, Phí cố định, Phí dịch vụ, Phí xử lý giao dịch, Thuế…); thiếu cột bắt buộc → lỗi \"File không đúng mẫu Báo Cáo Doanh Thu\" + `order_check_file_error {error_code, missing_column}`, không treo app.",
+      "Kiểm tra mọi đơn trong file bằng `checkOrder` (F29); file chứa 8 đơn thật đã đối chiếu (A–K, `raw/orders`) → 8 Khớp khi gán đúng sản phẩm.",
+      "Tóm tắt: 4 ô đếm Khớp · Lệch nhỏ · Lệch · Có điều chỉnh (bấm để lọc), lý do lệch nhiều nhất, tổng tiền lệch, phí nào chiếm bao nhiêu % doanh thu, lãi thật theo giá vốn đã lưu; danh sách đơn (4 ký tự cuối mã đơn · trạng thái · lệch) mở vào màn kết quả 1 đơn.",
+      "Gán SKU/tên sản phẩm trong file với sản phẩm trong Danh mục; nhớ cho lần sau (`state.skuMap`).",
+      "Chưa Pro: thấy tóm tắt + chi tiết 3 đơn đầu; đơn thứ 4 trở đi và gán SKU mở paywall (`paywall_view {trigger: order_check_file}`).",
+      "Không lưu nội dung file; chỉ lưu kết quả kiểm tra trên máy, xoá được. Chính sách quyền riêng tư thêm câu \"Tệp báo cáo bạn chọn được đọc trên thiết bị và không được gửi đi.\"",
+      "Unit: đọc file .xlsx mẫu sinh trong test (8 đơn thật + 1 đơn lệch), file sai mẫu."
+    ],
+    "state": "passing",
+    "verified_at": "2026-11-13T05:13:25.536Z"
+  }
+]

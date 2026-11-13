@@ -1,0 +1,19 @@
+{
+  "name": "lai-that",
+  "private": true,
+  "type": "module",
+  "description": "Lãi Thật: Tính Phí Sàn TMĐT — lãi thật mỗi đơn sau phí Shopee, TikTok Shop, Lazada. Build bằng mini harness: Wiki + Environment + Verification + Memory.",
+  "scripts": {
+    "test": "node --test app/tests/",
+    "test:auto": "bash test.sh",
+    "verify": "bash 3-verification/verify.sh",
+    "serve": "node 2-environment/serve.mjs",
+    "status": "node 4-memory/features.mjs brief",
+    "monitor": "node 2-environment/monitor.mjs",
+    "monitor:replay": "node 2-environment/monitor.mjs --replay",
+    "doctor": "node 2-environment/doctor.mjs --full"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

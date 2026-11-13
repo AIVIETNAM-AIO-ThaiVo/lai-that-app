@@ -1,0 +1,9 @@
+{
+  "appId": "vn.laithat.app",
+  "appName": "Lãi Thật",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0A7A6B",
+    "allowMixedContent": false
+  }
+}

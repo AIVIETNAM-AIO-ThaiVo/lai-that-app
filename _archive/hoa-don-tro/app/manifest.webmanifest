@@ -1,0 +1,16 @@
+{
+  "name": "Hóa Đơn Trọ: Tính Tiền Điện",
+  "short_name": "Hóa Đơn Trọ",
+  "description": "Tính tiền điện nhà trọ theo giá bậc thang mới, chia tiền phòng, gửi hóa đơn Zalo kèm VietQR.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F6F2",
+  "theme_color": "#1F6F5C",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

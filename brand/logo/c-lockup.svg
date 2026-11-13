@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256">
+  <title>Lãi Thật — C · Dấu ngã (lockup ngang — chữ đang là thẻ text để khám phá, chưa đổi thành path)</title>
+  <style>@font-face{font-family:'BVP0';font-weight:700;src:url('../../app/fonts/bevietnampro-700-vietnamese.woff2') format('woff2')}@font-face{font-family:'BVP1';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin.woff2') format('woff2')}@font-face{font-family:'BVP2';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin-ext.woff2') format('woff2')}</style>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="280" y="168" font-family="BVP0, BVP1, BVP2, sans-serif" font-weight="700" font-size="112" letter-spacing="-3" fill="#000">Lãi Thật</text>
+</svg>

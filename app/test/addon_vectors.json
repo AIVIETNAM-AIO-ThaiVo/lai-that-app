@@ -1,0 +1,737 @@
+{
+ "generated_by": "tools/addons.py",
+ "combos": [
+  {
+   "id": "CB2",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": null,
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 51000,
+    "profit": 10515.0,
+    "margin": 0.2061764705882353,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB3-5",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": [
+    "percent",
+    0.05
+   ],
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 48450.0,
+    "profit": 8564.25,
+    "margin": 0.17676470588235293,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB3-10",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": [
+    "percent",
+    0.1
+   ],
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 45900.0,
+    "profit": 6613.5,
+    "margin": 0.14408496732026144,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB3-15",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": [
+    "percent",
+    0.15
+   ],
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 43350.0,
+    "profit": 4662.75,
+    "margin": 0.107560553633218,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB3-amount",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": [
+    "amount",
+    10000
+   ],
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 41000,
+    "profit": 2865.0,
+    "margin": 0.06987804878048781,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB3-fixed",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "discount": [
+    "fixed",
+    45000
+   ],
+   "kw": {
+    "pack": 1500
+   },
+   "expect": {
+    "price": 45000,
+    "profit": 5925.0,
+    "margin": 0.13166666666666665,
+    "vx": 0.0,
+    "separate": 1515.0
+   }
+  },
+  {
+   "id": "CB6",
+   "items": [
+    {
+     "name": "Áo thun",
+     "cost": 60000,
+     "price": 149000,
+     "cat": 0.165,
+     "qty": 1
+    },
+    {
+     "name": "Móc khóa mua kèm",
+     "cost": 8000,
+     "price": 11900,
+     "cat": 0.16,
+     "qty": 1
+    }
+   ],
+   "discount": null,
+   "kw": {
+    "pack": 3000
+   },
+   "expect": {
+    "price": 160900,
+    "profit": 48343.5,
+    "margin": 0.30045680546923553,
+    "vx": 0.0,
+    "separate": 42343.5
+   }
+  },
+  {
+   "id": "CB7",
+   "items": [
+    {
+     "name": "Nồi",
+     "cost": 150000,
+     "price": 300000,
+     "cat": 0.1,
+     "qty": 2
+    }
+   ],
+   "discount": [
+    "percent",
+    0.1
+   ],
+   "kw": {
+    "pack": 5000,
+    "programs": [
+     "voucher_xtra",
+     "piship"
+    ]
+   },
+   "expect": {
+    "price": 540000.0,
+    "profit": 105100.0,
+    "margin": 0.19462962962962962,
+    "vx": 29700.0,
+    "separate": 140600.0
+   }
+  },
+  {
+   "id": "CB7-cap",
+   "items": [
+    {
+     "name": "Nồi",
+     "cost": 600000,
+     "price": 1200000,
+     "cat": 0.1,
+     "qty": 2
+    }
+   ],
+   "discount": null,
+   "kw": {
+    "pack": 5000,
+    "programs": [
+     "voucher_xtra"
+    ]
+   },
+   "expect": {
+    "price": 2400000,
+    "profit": 672000.0,
+    "margin": 0.28,
+    "vx": 100000.0,
+    "separate": 664000.0
+   }
+  }
+ ],
+ "max_discount": [
+  {
+   "id": "CB4-0.2",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "m": 0.2,
+   "kw": {
+    "pack": 1500
+   },
+   "expect": 0.010931806350859052
+  },
+  {
+   "id": "CB4-0.1",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "m": 0.1,
+   "kw": {
+    "pack": 1500
+   },
+   "expect": 0.15966386554621864
+  },
+  {
+   "id": "CB4-0.0",
+   "items": [
+    {
+     "name": "Móc khóa",
+     "cost": 8000,
+     "price": 17000,
+     "cat": 0.16,
+     "qty": 3
+    }
+   ],
+   "m": 0.0,
+   "kw": {
+    "pack": 1500
+   },
+   "expect": 0.26951172625913117
+  }
+ ],
+ "checks": [
+  {
+   "id": "KD1",
+   "order": {
+    "price": 74692,
+    "ship_buyer": 21500,
+    "fixed_fee": 11951,
+    "service_fee": 7108,
+    "transaction_fee": 5772,
+    "piship": 2700,
+    "visibility": 807,
+    "vat": 747,
+    "pit": 373
+   },
+   "cat_rate": 0.16,
+   "programs": [
+    "voucher_xtra",
+    "piship",
+    "visibility"
+   ],
+   "kw": {},
+   "expect": {
+    "status": "khop",
+    "mismatches": 0,
+    "total_diff": 0,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD2",
+   "order": {
+    "price": 74692,
+    "ship_buyer": 21500,
+    "fixed_fee": 11951,
+    "service_fee": 7108,
+    "transaction_fee": 5772,
+    "piship": 2700,
+    "visibility": 807,
+    "vat": 747,
+    "pit": 373
+   },
+   "cat_rate": 0.15,
+   "programs": [
+    "piship"
+   ],
+   "kw": {},
+   "expect": {
+    "status": "lech",
+    "mismatches": 3,
+    "total_diff": 5662,
+    "lines": {
+     "fixed_fee": {
+      "status": "lech",
+      "reason": "category_rate",
+      "diff": 747
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "lech",
+      "reason": "voucher_program",
+      "diff": 4108
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "lech",
+      "reason": "visibility",
+      "diff": 807
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD3",
+   "order": {
+    "price": 170000,
+    "ship_buyer": 146900,
+    "fixed_fee": 23800,
+    "service_fee": 12350,
+    "transaction_fee": 19014,
+    "vat": 0,
+    "pit": 850
+   },
+   "cat_rate": 0.14,
+   "programs": [
+    "voucher_xtra"
+   ],
+   "kw": {},
+   "expect": {
+    "status": "lech",
+    "mismatches": 1,
+    "total_diff": -1700,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "lech",
+      "reason": "vat_not_withheld",
+      "diff": -1700
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD3b",
+   "order": {
+    "price": 170000,
+    "ship_buyer": 146900,
+    "fixed_fee": 23800,
+    "service_fee": 12350,
+    "transaction_fee": 19014,
+    "vat": 0,
+    "pit": 850
+   },
+   "cat_rate": 0.14,
+   "programs": [
+    "voucher_xtra"
+   ],
+   "kw": {
+    "vat": false
+   },
+   "expect": {
+    "status": "khop",
+    "mismatches": 0,
+    "total_diff": 0,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD4",
+   "order": {
+    "price": 74692,
+    "ship_buyer": 21500,
+    "fixed_fee": 0,
+    "service_fee": 7108,
+    "transaction_fee": 5772,
+    "piship": 2700,
+    "visibility": 807,
+    "vat": 747,
+    "pit": 373
+   },
+   "cat_rate": 0.16,
+   "programs": [
+    "voucher_xtra",
+    "piship",
+    "visibility"
+   ],
+   "kw": {
+    "new_shop": true
+   },
+   "expect": {
+    "status": "khop",
+    "mismatches": 0,
+    "total_diff": 0,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD5",
+   "order": {
+    "price": 94692,
+    "ship_buyer": 21500,
+    "fixed_fee": 11951,
+    "service_fee": 7108,
+    "transaction_fee": 5772,
+    "piship": 2700,
+    "visibility": 807,
+    "vat": 747,
+    "pit": 373,
+    "refund": 20000
+   },
+   "cat_rate": 0.16,
+   "programs": [
+    "voucher_xtra",
+    "piship",
+    "visibility"
+   ],
+   "kw": {},
+   "expect": {
+    "status": "dieu_chinh",
+    "mismatches": 0,
+    "total_diff": 0,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "KD6",
+   "order": {
+    "price": 74692,
+    "ship_buyer": 21500,
+    "fixed_fee": 11953,
+    "service_fee": 7108,
+    "transaction_fee": 5772,
+    "piship": 2700,
+    "visibility": 807,
+    "vat": 747,
+    "pit": 373
+   },
+   "cat_rate": 0.16,
+   "programs": [
+    "voucher_xtra",
+    "piship",
+    "visibility"
+   ],
+   "kw": {
+    "items": 3
+   },
+   "expect": {
+    "status": "khop",
+    "mismatches": 0,
+    "total_diff": 0,
+    "lines": {
+     "fixed_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 2
+     },
+     "transaction_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "service_fee": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "piship": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "visibility": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "vat": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     },
+     "pit": {
+      "status": "khop",
+      "reason": "",
+      "diff": 0
+     }
+    }
+   }
+  }
+ ]
+}

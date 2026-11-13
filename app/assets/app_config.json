@@ -1,0 +1,34 @@
+{
+  "note": "Cấu hình app (vai trò Remote Config ngoài biểu phí). Xem 1-wiki/product/decisions.md.",
+  "pro_gates_enabled": true,
+  "free_catalog_limit": 5,
+  "pro_prices": {
+    "monthly": 49000,
+    "yearly": 299000,
+    "trial_days": 3
+  },
+  "interstitial_min_seconds": 180,
+  "interstitial_after_calcs": 3,
+  "calc_event_debounce_ms": 1500,
+  "fee_check_interval_hours": 24,
+  "ads_enabled": true,
+  "rewarded_seconds": 5,
+  "interstitial_close_seconds": 3,
+  "billing_skus": {
+    "monthly": "pro_monthly",
+    "yearly": "pro_yearly"
+  },
+  "billing_plans": {
+    "monthly": "monthly",
+    "yearly": "yearly"
+  },
+  "admob": {
+    "test": true,
+    "app_id_android": "ca-app-pub-3940256099942544~3347511713",
+    "banner": "ca-app-pub-3940256099942544/6300978111",
+    "interstitial": "ca-app-pub-3940256099942544/1033173712",
+    "rewarded": "ca-app-pub-3940256099942544/5224354917",
+    "banner_margin": 64
+  },
+  "fee_presets_url": null
+}

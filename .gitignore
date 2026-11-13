@@ -1,0 +1,7 @@
+reports/
+4-memory/logs/
+4-memory/features.plan.json
+.DS_Store
+# Video demo > 100 MB (giới hạn GitHub): đăng YouTube/Drive, dán link vào README
+brand/video/*.mp4
+.idea/

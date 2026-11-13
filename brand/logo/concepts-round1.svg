@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="984" viewBox="0 0 1600 984"><defs><filter id="grey"><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="1600" height="984" fill="#f7f7f4"/><text x="60" y="78" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#161616">Lãi Thật — 3 hướng logo</text><text x="60" y="116" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" fill="#6b6b6b">Vòng 1 · in xám · rõ ràng, đáng tin</text><rect x="60" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#161616" stroke-width="2"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="90" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — A · Phần còn lại</title>
+  <!-- A · Phần còn lại: khối vuông 192 (lưới 16), một mảnh phí 64×64 tách khỏi góc trên-phải, phần còn lại là chữ L.
+       Nét L dày 80, mảnh phí cách L 24 mỗi phía, bo góc 12. -->
+  <path d="M44 32h56a12 12 0 0 1 12 12v100h100a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V44a12 12 0 0 1 12-12z" fill="#000"/>
+  <rect x="148" y="32" width="76" height="76" rx="12" fill="#000"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" x="90" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — A · Phần còn lại (lockup ngang — chữ đang là thẻ text để khám phá, chưa đổi thành path)</title>
+  <style>@font-face{font-family:'BVP0';font-weight:700;src:url('../../app/fonts/bevietnampro-700-vietnamese.woff2') format('woff2')}@font-face{font-family:'BVP1';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin.woff2') format('woff2')}@font-face{font-family:'BVP2';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin-ext.woff2') format('woff2')}</style>
+  <!-- A · Phần còn lại: khối vuông 192 (lưới 16), một mảnh phí 64×64 tách khỏi góc trên-phải, phần còn lại là chữ L.
+       Nét L dày 80, mảnh phí cách L 24 mỗi phía, bo góc 12. -->
+  <path d="M44 32h56a12 12 0 0 1 12 12v100h100a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V44a12 12 0 0 1 12-12z" fill="#000"/>
+  <rect x="148" y="32" width="76" height="76" rx="12" fill="#000"/>
+  <text x="280" y="168" font-family="BVP0, BVP1, BVP2, sans-serif" font-weight="700" font-size="112" letter-spacing="-3" fill="#000">Lãi Thật</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="90" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — A · Phần còn lại</title>
+  <!-- A · Phần còn lại: khối vuông 192 (lưới 16), một mảnh phí 64×64 tách khỏi góc trên-phải, phần còn lại là chữ L.
+       Nét L dày 80, mảnh phí cách L 24 mỗi phía, bo góc 12. -->
+  <path d="M44 32h56a12 12 0 0 1 12 12v100h100a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V44a12 12 0 0 1 12-12z" fill="#000"/>
+  <rect x="148" y="32" width="76" height="76" rx="12" fill="#000"/>
+</svg>
+</g><text x="122" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="180" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — A · Phần còn lại</title>
+  <!-- A · Phần còn lại: khối vuông 192 (lưới 16), một mảnh phí 64×64 tách khỏi góc trên-phải, phần còn lại là chữ L.
+       Nét L dày 80, mảnh phí cách L 24 mỗi phía, bo góc 12. -->
+  <path d="M44 32h56a12 12 0 0 1 12 12v100h100a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V44a12 12 0 0 1 12-12z" fill="#000"/>
+  <rect x="148" y="32" width="76" height="76" rx="12" fill="#000"/>
+</svg>
+</g><text x="196" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="238" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — A · Phần còn lại</title>
+  <!-- A · Phần còn lại: khối vuông 192 (lưới 16), một mảnh phí 64×64 tách khỏi góc trên-phải, phần còn lại là chữ L.
+       Nét L dày 80, mảnh phí cách L 24 mỗi phía, bo góc 12. -->
+  <path d="M44 32h56a12 12 0 0 1 12 12v100h100a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12H44a12 12 0 0 1-12-12V44a12 12 0 0 1 12-12z" fill="#000"/>
+  <rect x="148" y="32" width="76" height="76" rx="12" fill="#000"/>
+</svg>
+</g><text x="246" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="90.0" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">A · Phần còn lại</text><text x="90.0" y="808" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#161616" letter-spacing="1.5">RECOMMENDED</text><text x="90.0" y="842" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Tách mảnh phí khỏi khối giá, phần còn lại</text><text x="90.0" y="868" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">là chữ L — lãi.</text><rect x="562.667" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="592.667" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — B · Thăng bằng</title>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" x="592.667" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — B · Thăng bằng (lockup ngang — chữ đang là thẻ text để khám phá, chưa đổi thành path)</title>
+  <style>@font-face{font-family:'BVP0';font-weight:700;src:url('../../app/fonts/bevietnampro-700-vietnamese.woff2') format('woff2')}@font-face{font-family:'BVP1';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin.woff2') format('woff2')}@font-face{font-family:'BVP2';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin-ext.woff2') format('woff2')}</style>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <text x="280" y="168" font-family="BVP0, BVP1, BVP2, sans-serif" font-weight="700" font-size="112" letter-spacing="-3" fill="#000">Lãi Thật</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="592.667" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — B · Thăng bằng</title>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+</svg>
+</g><text x="624.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="682.667" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — B · Thăng bằng</title>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+</svg>
+</g><text x="698.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="740.667" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — B · Thăng bằng</title>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+</svg>
+</g><text x="748.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="592.6666666666667" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">B · Thăng bằng</text><text x="592.6666666666667" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Bọt khí nằm đúng giữa: con số thật, không</text><text x="592.6666666666667" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">lệch.</text><rect x="1065.33" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1095.33" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — C · Dấu ngã</title>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" x="1095.33" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — C · Dấu ngã (lockup ngang — chữ đang là thẻ text để khám phá, chưa đổi thành path)</title>
+  <style>@font-face{font-family:'BVP0';font-weight:700;src:url('../../app/fonts/bevietnampro-700-vietnamese.woff2') format('woff2')}@font-face{font-family:'BVP1';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin.woff2') format('woff2')}@font-face{font-family:'BVP2';font-weight:700;src:url('../../app/fonts/bevietnampro-700-latin-ext.woff2') format('woff2')}</style>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="280" y="168" font-family="BVP0, BVP1, BVP2, sans-serif" font-weight="700" font-size="112" letter-spacing="-3" fill="#000">Lãi Thật</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1095.33" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — C · Dấu ngã</title>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+</g><text x="1127.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1185.33" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — C · Dấu ngã</title>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+</g><text x="1201.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" x="1243.33" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title>Lãi Thật — C · Dấu ngã</title>
+  <g transform="translate(16 -6)">
+  <!-- C v2 · Dấu ngã: chữ "a" một tầng = vòng tròn (ngoài r 64, trong r 36, nét 28) + thân đứng 28;
+       dấu ngã đối xứng xoay 180° quanh (116,50), nét 24 đầu tròn, rộng bằng khối chữ (x 58–174). -->
+  <path fill-rule="evenodd" fill="#000" d="M112 100a64 64 0 1 1 0 128a64 64 0 0 1 0-128zm0 28a36 36 0 1 0 0 72a36 36 0 0 0 0-72z"/>
+  <rect x="148" y="100" width="28" height="128" rx="4" fill="#000"/>
+  <path d="M60 62C76 38 98 38 116 50S156 62 172 38" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+</g><text x="1251.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="1095.3333333333335" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">C · Dấu ngã</text><text x="1095.3333333333335" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Dấu ngã của chữ ã — chi tiết chỉ tiếng Việt</text><text x="1095.3333333333335" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">có.</text></svg>

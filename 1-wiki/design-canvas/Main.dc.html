@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Định hướng UI/UX</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A7A6B}a:hover{color:#075E52}
+</style>
+</helmet>
+<div style="width: 1200px; height: 1500px; box-sizing: border-box; padding: 64px; background: #F6F7F9; color: #12161C; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; gap: 48px; font-variant-numeric: tabular-nums">
+
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6472">Định hướng giao diện · MVP</div>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Lãi Thật</h1>
+<p style="margin: 0; font-size: 20px; color: #3A424E; max-width: 640px">Một máy tính lãi cho người bán trên sàn: nhập giá vốn và giá bán, thấy ngay mỗi đơn còn lại bao nhiêu sau phí.</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px">
+<div style="font-size: 13px; color: #5B6472">Ví dụ: móc khóa bán 17.000đ</div>
+<div style="font-size: 48px; font-weight: 700; color: {{thin}}; line-height: 1">505đ</div>
+<div style="font-size: 14px; font-weight: 600; color: {{thin}}">Lãi mỏng · 3,0% giá bán</div>
+</div>
+</header>
+
+<section style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 600; color: {{accent}}">Nguyên tắc 1</div>
+<div style="font-size: 22px; font-weight: 700">Con số trước, chữ sau</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A424E">Tiền lãi là chữ lớn nhất trên màn. Mọi nhãn, giải thích, mẹo nằm dưới và nhỏ hơn.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 600; color: {{accent}}">Nguyên tắc 2</div>
+<div style="font-size: 22px; font-weight: 700">Một màn, một quyết định</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A424E">Mỗi màn trả lời đúng một câu: bán giá này có lãi không, nên bán giá nào, bán sàn nào.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 600; color: {{accent}}">Nguyên tắc 3</div>
+<div style="font-size: 22px; font-weight: 700">Không màu của sàn</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A424E">Sàn hiện bằng chữ trên nhãn trung tính, không logo, không cam, không đen-hồng. Tránh rủi ro thương hiệu khi duyệt Play.</p>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 24px; font-weight: 700">Màu: ba trạng thái tiền</h2>
+<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #F6F7F9; border: 1px solid #D5DAE1"></div>
+<div style="font-size: 14px; font-weight: 600">Nền</div>
+<div style="font-size: 13px; color: #5B6472">#F6F7F9</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #12161C"></div>
+<div style="font-size: 14px; font-weight: 600">Chữ</div>
+<div style="font-size: 13px; color: #5B6472">#12161C · 17,4:1</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #5B6472"></div>
+<div style="font-size: 14px; font-weight: 600">Chữ phụ</div>
+<div style="font-size: 13px; color: #5B6472">#5B6472 · 5,6:1</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: {{accent}}"></div>
+<div style="font-size: 14px; font-weight: 600">Lãi</div>
+<div style="font-size: 13px; color: #5B6472">#0A7A6B · 5,3:1</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: {{thin}}"></div>
+<div style="font-size: 14px; font-weight: 600">Lãi mỏng (&lt;10%)</div>
+<div style="font-size: 13px; color: #5B6472">#A16207 · 4,9:1</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: {{loss}}"></div>
+<div style="font-size: 14px; font-weight: 600">Lỗ</div>
+<div style="font-size: 13px; color: #5B6472">#C2410C · 5,2:1</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3A424E">Ba trạng thái luôn có chữ kèm (“Lãi”, “Lãi mỏng”, “Lỗ”) và dấu trừ, nên người mù màu đỏ-xanh vẫn đọc được. Tỉ lệ tương phản đo trên nền trắng.</p>
+</section>
+
+<section style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 24px; font-weight: 700">Chữ: Be Vietnam Pro</h2>
+<div style="display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="width: 96px; font-size: 13px; color: #5B6472">Số lớn 44/700</span><span style="font-size: 44px; font-weight: 700; line-height: 1">41.061đ</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="width: 96px; font-size: 13px; color: #5B6472">Tiêu đề 22/700</span><span style="font-size: 22px; font-weight: 700">Bán giá này lãi bao nhiêu?</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="width: 96px; font-size: 13px; color: #5B6472">Nội dung 16/400</span><span style="font-size: 16px">Phí cố định ngành Thời trang nữ 16,5%</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="width: 96px; font-size: 13px; color: #5B6472">Nhãn 13/500</span><span style="font-size: 13px; font-weight: 500; color: #5B6472">Áp dụng từ 23/05/2026 · nguồn Shopee</span></div>
+<p style="margin: 0; font-size: 14px; color: #3A424E">Số luôn dùng chữ số đều cột (tabular), dấu chấm ngăn nghìn, “đ” sau số. Font có đủ dấu tiếng Việt, không vỡ dấu chồng.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 24px; font-weight: 700">Thành phần</h2>
+<div style="display: flex; flex-direction: column; gap: 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 24px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500; color: #5B6472">Giá vốn
+<span style="display: flex; align-items: center; height: 52px; border: 1.5px solid #12161C; border-radius: 12px; padding: 0 16px; gap: 8px">
+<input type="text" value="8.000" inputmode="numeric" style="flex: 1; border: 0; outline: none; font: inherit; font-size: 20px; font-weight: 600; color: #12161C; background: transparent; min-width: 0">
+<span style="font-size: 16px; color: #5B6472">đ</span>
+</span>
+</label>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 22px; border: 0; background: #12161C; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600">Shopee</button>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 22px; border: 1px solid #C9CFD8; background: #FFFFFF; color: #12161C; font: inherit; font-size: 15px; font-weight: 500">TikTok Shop</button>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 22px; border: 1px solid #C9CFD8; background: #FFFFFF; color: #12161C; font: inherit; font-size: 15px; font-weight: 500">Lazada</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px">
+<div style="border-radius: 12px; padding: 12px; background: #E6F4F1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 600; color: {{accent}}">Lãi</span><span style="font-size: 20px; font-weight: 700; color: {{accent}}">41.061đ</span><span style="font-size: 12px; color: #3A424E">27,6%</span></div>
+<div style="border-radius: 12px; padding: 12px; background: #FBF1DE; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 600; color: {{thin}}">Lãi mỏng</span><span style="font-size: 20px; font-weight: 700; color: {{thin}}">505đ</span><span style="font-size: 12px; color: #3A424E">3,0%</span></div>
+<div style="border-radius: 12px; padding: 12px; background: #FCEBE3; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 600; color: {{loss}}">Lỗ</span><span style="font-size: 20px; font-weight: 700; color: {{loss}}">−1.380đ</span><span style="font-size: 12px; color: #3A424E">−11,5%</span></div>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start; border-radius: 12px; padding: 14px 16px; background: #FCEBE3; border: 1px solid #F3C7B3">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+<span style="font-size: 14px; line-height: 1.45; color: #12161C"><b>Biểu phí mới áp dụng.</b> 2 sản phẩm của bạn chuyển sang lỗ.</span>
+</div>
+<button type="button" style="height: 52px; border-radius: 14px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600">Lưu sản phẩm</button>
+</div>
+</div>
+</section>
+
+<footer style="display: flex; justify-content: space-between; gap: 24px; padding-top: 24px; border-top: 1px solid #D5DAE1; font-size: 14px; color: #3A424E">
+<span>Bo góc 12–16px · lưới 8px · chạm tối thiểu 44px · nền sáng mặc định, có chế độ tối</span>
+<span>Ứng dụng độc lập, không liên kết với Shopee, TikTok, Lazada</span>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0A7A6B"},"thin":{"editor":"color","default":"#A16207"},"loss":{"editor":"color","default":"#C2410C"},"$preview":{"width":1200,"height":1500}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+accent: this.props.accent ?? '#0A7A6B',
+thin: this.props.thin ?? '#A16207',
+loss: this.props.loss ?? '#C2410C'
+};
+}
+}
+</script>
+</body>
+</html>

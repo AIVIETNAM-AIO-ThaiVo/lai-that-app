@@ -1,0 +1,521 @@
+{
+  "schema_version": 2,
+  "as_of": "2026-11-12",
+  "note": "Mặc định = mức phổ biến nhất của ngành cấp 1; người dùng sửa được mọi %. Phí Shopee đã gồm VAT. Mọi phí % và thuế tính trên (giá − mã giảm giá của shop); riêng phí xử lý giao dịch tính trên (giá − mã giảm giá shop + phí ship người mua trả).",
+  "tax_withholding": {
+    "goods_vat": 0.01,
+    "goods_pit": 0.005,
+    "source": "Nghị định 117/2025/NĐ-CP, hiệu lực 01/07/2025",
+    "user_toggle_default_on": true,
+    "base": "giá sau mã giảm giá của shop",
+    "note": "Đã thấy 1 đơn Shopee chỉ khấu trừ TNCN 0,5%; để công tắc GTGT cho người dùng"
+  },
+  "platforms": {
+    "shopee": {
+      "label": "Shopee (shop thường)",
+      "transaction_fee": {
+        "rate": 0.06,
+        "effective": "2026-05-01",
+        "note": "Phí xử lý giao dịch, mọi phương thức thanh toán, đã gồm VAT",
+        "base": "(giá − mã giảm giá shop + phí ship người mua trả − KM ngân hàng) × 6%",
+        "source": "https://banhang.shopee.vn/edu/article/2150"
+      },
+      "per_order_fixed": [
+        {
+          "name": "Phí hạ tầng",
+          "amount": 3000,
+          "effective": "2025-07-01",
+          "source": "https://banhang.shopee.vn/edu/article/25223"
+        }
+      ],
+      "programs": [
+        {
+          "id": "voucher_xtra",
+          "name": "Gói Voucher Xtra",
+          "rate": 0.055,
+          "cap_per_item": 50000,
+          "base": "giá sau mã giảm giá shop",
+          "effective": "2026-05-23",
+          "default_on": false
+        },
+        {
+          "id": "piship",
+          "name": "Dịch vụ PiShip",
+          "amount_per_order": 2700,
+          "default_on": false,
+          "evidence": "4/8 đơn thật 09–11/2026"
+        },
+        {
+          "id": "visibility",
+          "name": "Phí dịch vụ hiển thị (trừ từ doanh thu đơn)",
+          "rate": 0.0108,
+          "base": "giá sau mã giảm giá shop",
+          "default_on": false,
+          "evidence": "2/8 đơn thật: 807/74.692 và 3.780/350.000 = 1,08% (1% + VAT 8%)",
+          "source": "https://news.tuoitre.vn/in-vietnam-e-commerce-platforms-race-to-raise-fees-leaving-sellers-in-distress-10326052116130748.htm"
+        }
+      ],
+      "fixed_fee_source": "Học viện Shopee, bài 2139; PDF 'Shopee non-Mall_ Phi Co Dinh tu 23.05.2026' (1.439 dòng)",
+      "fixed_fee_effective": "2026-05-23",
+      "categories": [
+        {
+          "name": "Thời Trang Nữ",
+          "default": 0.165,
+          "min": 0.145,
+          "max": 0.165
+        },
+        {
+          "name": "Thời Trang Nam",
+          "default": 0.165,
+          "min": 0.145,
+          "max": 0.165
+        },
+        {
+          "name": "Phụ Kiện Thời Trang",
+          "default": 0.165,
+          "min": 0.145,
+          "max": 0.165
+        },
+        {
+          "name": "Thời trang trẻ em & trẻ sơ sinh",
+          "default": 0.165,
+          "min": 0.155,
+          "max": 0.165
+        },
+        {
+          "name": "Giày Dép Nữ",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.165
+        },
+        {
+          "name": "Giày Dép Nam",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.155
+        },
+        {
+          "name": "Túi Ví Nữ",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.165
+        },
+        {
+          "name": "Túi Ví Nam",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.165
+        },
+        {
+          "name": "Đồng Hồ",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.155
+        },
+        {
+          "name": "Sắc Đẹp",
+          "default": 0.17,
+          "min": 0.17,
+          "max": 0.17
+        },
+        {
+          "name": "Sức Khỏe",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.17
+        },
+        {
+          "name": "Mẹ & Bé",
+          "default": 0.145,
+          "min": 0.105,
+          "max": 0.16
+        },
+        {
+          "name": "Thực phẩm và đồ uống",
+          "default": 0.14,
+          "min": 0.1,
+          "max": 0.15
+        },
+        {
+          "name": "Nhà cửa & Đời sống",
+          "default": 0.16,
+          "min": 0.1,
+          "max": 0.16
+        },
+        {
+          "name": "Sở thích & Sưu tầm",
+          "default": 0.16,
+          "min": 0.15,
+          "max": 0.17
+        },
+        {
+          "name": "Chăm Sóc Thú Cưng",
+          "default": 0.14,
+          "min": 0.14,
+          "max": 0.14
+        },
+        {
+          "name": "Văn Phòng Phẩm",
+          "default": 0.13,
+          "min": 0.11,
+          "max": 0.16
+        },
+        {
+          "name": "Sách & Tạp Chí",
+          "default": 0.15,
+          "min": 0.14,
+          "max": 0.15
+        },
+        {
+          "name": "Thể Thao & Dã Ngoại",
+          "default": 0.135,
+          "min": 0.135,
+          "max": 0.165
+        },
+        {
+          "name": "Du lịch & Hành lý",
+          "default": 0.155,
+          "min": 0.135,
+          "max": 0.155
+        },
+        {
+          "name": "Muslim Fashion",
+          "default": 0.155,
+          "min": 0.155,
+          "max": 0.155
+        },
+        {
+          "name": "Điện Thoại & Phụ Kiện",
+          "default": 0.15,
+          "min": 0.02,
+          "max": 0.15
+        },
+        {
+          "name": "Máy tính & Laptop",
+          "default": 0.09,
+          "min": 0.02,
+          "max": 0.12
+        },
+        {
+          "name": "Thiết Bị Âm Thanh",
+          "default": 0.12,
+          "min": 0.1,
+          "max": 0.12
+        },
+        {
+          "name": "Cameras & Flycam",
+          "default": 0.13,
+          "min": 0.07,
+          "max": 0.13
+        },
+        {
+          "name": "Gaming & Console",
+          "default": 0.11,
+          "min": 0.085,
+          "max": 0.12
+        },
+        {
+          "name": "Thiết Bị Điện Gia Dụng",
+          "default": 0.11,
+          "min": 0.075,
+          "max": 0.13
+        },
+        {
+          "name": "Voucher & Dịch vụ",
+          "default": 0.13,
+          "min": 0.13,
+          "max": 0.13
+        },
+        {
+          "name": "Ô tô",
+          "default": 0.16,
+          "min": 0.035,
+          "max": 0.16
+        },
+        {
+          "name": "Mô tô, xe máy",
+          "default": 0.16,
+          "min": 0.015,
+          "max": 0.16
+        },
+        {
+          "name": "Phụ tùng & Phụ kiện xe cơ giới",
+          "default": 0.16,
+          "min": 0.015,
+          "max": 0.16
+        }
+      ],
+      "new_seller_promo": {
+        "name": "Miễn Phí Cố Định 30 ngày",
+        "max_orders": 200,
+        "applies_from": "2026-11-01",
+        "source": "Học viện Shopee bài 2139"
+      },
+      "category_base": "giá sau mã giảm giá shop"
+    },
+    "tiktok_shop": {
+      "label": "TikTok Shop (nhà bán tiêu chuẩn)",
+      "transaction_fee": {
+        "rate": 0.06,
+        "effective": "2026-05-09",
+        "vat_included": true,
+        "base": "tổng người mua trả, gồm ship người mua trả",
+        "note": "Shop đã đăng ký và xác minh MST: chỉ thu phần chưa thuế (chia 1,1). Có chương trình tiết kiệm phí giao dịch (đơn thật 15/10/2026: 4,25%)."
+      },
+      "per_order_fixed": [
+        {
+          "name": "Phí xử lý đơn hàng",
+          "amount": 3000,
+          "effective": "2025-10-27",
+          "note": "Đơn thật 15/10/2026 thấy 2.550đ; cho người dùng sửa"
+        },
+        {
+          "name": "Phí vận hành logistics (kiện > 10 kg)",
+          "amount_range": [
+            3000,
+            65000
+          ],
+          "effective": "2026-10-12",
+          "status": "cần xác minh",
+          "default_on": false
+        }
+      ],
+      "programs": [
+        {
+          "id": "vxp",
+          "name": "Voucher Xtra (VXP)",
+          "rate": 0.04,
+          "cap_per_item": 50000,
+          "effective": "2026-05-09",
+          "default_on": false
+        },
+        {
+          "id": "shipping_guarantee",
+          "name": "Shipping Fee Guarantee",
+          "amount_per_order": 2060,
+          "default_on": false,
+          "evidence": "1 đơn thật 15/10/2026"
+        }
+      ],
+      "commission_source": "VCCI/Báo Công Thương 04/05/2026 (khoảng theo nhóm ngành)",
+      "categories": [
+        {
+          "name": "Thời trang",
+          "default": 0.135,
+          "min": 0.125,
+          "max": 0.135
+        },
+        {
+          "name": "Sức khỏe & Làm đẹp",
+          "default": 0.14,
+          "min": 0.125,
+          "max": 0.14
+        },
+        {
+          "name": "Bách hóa",
+          "default": 0.13,
+          "min": 0.09,
+          "max": 0.13
+        },
+        {
+          "name": "Khác (tự nhập)",
+          "default": null
+        }
+      ],
+      "mall_note": "Mall: Thời trang 14,7–16,1%; Sức khỏe & làm đẹp đến 17,8%; Mẹ & bé 11,5–17,8%",
+      "tax_registered_seller": {
+        "fee_divisor": 1.1,
+        "applies_to": [
+          "commission",
+          "transaction_fee",
+          "per_order_fixed"
+        ],
+        "default_on": false
+      },
+      "status": "Chưa đối chiếu đủ đơn thật; mọi dòng phí sửa được"
+    },
+    "lazada": {
+      "label": "Lazada",
+      "transaction_fee": {
+        "rate": 0.06,
+        "effective": "2026-05",
+        "note": "Phí xử lý đơn thành công"
+      },
+      "per_order_fixed": [
+        {
+          "name": "Phí hạ tầng kỹ thuật",
+          "amount": 3000,
+          "effective": "2026-05"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Tự nhập % hoa hồng",
+          "default": null
+        }
+      ],
+      "status": "Chưa có biểu hoa hồng theo ngành từ nguồn chính thức"
+    }
+  },
+  "validation_cases": [
+    {
+      "id": "A_keo_sua",
+      "type": "real_order",
+      "source": "https://www.youtube.com/watch?v=CRe4m3Gp4vI (~8:10)",
+      "price": 74692,
+      "ship_buyer": 21500,
+      "fixed_fee": 11951,
+      "piship": 2700,
+      "service_fee": 7108,
+      "transaction_fee": 5772,
+      "affiliate": 4840,
+      "ads_deduct": 807,
+      "vat": 747,
+      "pit": 373,
+      "payout": 40394
+    },
+    {
+      "id": "B_dem_topper",
+      "type": "real_order",
+      "source": "https://www.youtube.com/watch?v=B-7xjG5lnH8 (~18:38)",
+      "price": 325000,
+      "ship_buyer": 34500,
+      "fixed_fee": 52000,
+      "service_fee": 20875,
+      "transaction_fee": 21570,
+      "vat": 3250,
+      "pit": 1625,
+      "payout_excl_shipping": 225680
+    },
+    {
+      "id": "C_ao_thun_tabcom",
+      "type": "worked_example",
+      "source": "https://www.tiktok.com/@ducduy_tabcomcare/photo/7697812787787255061",
+      "price": 199000,
+      "fixed_fee": 32835,
+      "transaction_fee": 11940,
+      "piship_plus_infra": 5700,
+      "tax": 2985,
+      "total": 53460
+    },
+    {
+      "id": "bigseller_fnb_1m",
+      "type": "worked_example",
+      "platform": "shopee",
+      "price": 1000000,
+      "fixed_fee": 0.137,
+      "transaction": 0.06,
+      "expected_fee_total": 197000
+    },
+    {
+      "id": "D_tiktok_15_10",
+      "type": "real_order",
+      "platform": "tiktok_shop",
+      "source": "https://www.youtube.com/watch?v=Rorgig4Cg8M (~5:05)",
+      "order_id": "586601909955233521",
+      "created": "2026-10-15",
+      "revenue_after_seller_discount": 240000,
+      "transaction_fee": 10200,
+      "transaction_fee_note": "Đã áp dụng tiết kiệm phí giao dịch: 4,25% thay vì 6%",
+      "commission": 23868,
+      "seller_shipping": 0,
+      "affiliate": 34200,
+      "voucher_xtra": 10200,
+      "processing_fee": 2550,
+      "shipping_fee_guarantee": 2060,
+      "total_fees": 83078,
+      "settlement": 156922,
+      "status": "chưa giải thích được: phí xử lý đơn 2.550đ (preset 3.000đ), hoa hồng 23.868đ không khớp mức % tròn; cần thêm đơn TikTok"
+    },
+    {
+      "id": "F",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 650000,
+      "seller_voucher": 3000,
+      "fixed_fee": 77640,
+      "piship": 2700,
+      "service_fee": 3000,
+      "transaction_fee": 38820,
+      "vat": 6470,
+      "pit": 3235,
+      "payout": 515135
+    },
+    {
+      "id": "G",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 170000,
+      "ship_buyer": 146900,
+      "fixed_fee": 23800,
+      "service_fee": 12350,
+      "transaction_fee": 19014,
+      "vat": 0,
+      "pit": 850,
+      "payout": 113986,
+      "note": "không khấu trừ GTGT 1%"
+    },
+    {
+      "id": "H",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 180000,
+      "fixed_fee": 25200,
+      "service_fee": 12900,
+      "transaction_fee": 10800,
+      "vat": 1800,
+      "pit": 900,
+      "payout": 128400
+    },
+    {
+      "id": "I",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 275000,
+      "fixed_fee": 46750,
+      "piship": 2700,
+      "service_fee": 18125,
+      "transaction_fee": 16500,
+      "vat": 2750,
+      "pit": 1375
+    },
+    {
+      "id": "J",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 450000,
+      "seller_voucher": 18000,
+      "fixed_fee": 71280,
+      "piship": 2700,
+      "service_fee": 26760,
+      "transaction_fee": 25920,
+      "affiliate": 34432,
+      "vat": 4320,
+      "pit": 2160
+    },
+    {
+      "id": "K",
+      "type": "real_order",
+      "source": "FB nhóm 'Shopee người bán - chia sẻ kinh nghiệm bán hàng' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+      "price": 350000,
+      "ship_buyer": 32800,
+      "fixed_fee": 57750,
+      "service_fee": 22250,
+      "transaction_fee": 22968,
+      "ads_deduct": 3780,
+      "vat": 3500,
+      "pit": 1750,
+      "payout": 270802
+    }
+  ],
+  "fee_version": "2026-11-12.1",
+  "remote_config_keys": {
+    "fee_presets": "JSON này",
+    "fee_version": "2026-11-12.1",
+    "pro_prices": {
+      "monthly": 49000,
+      "yearly": 299000,
+      "trial_days": 3
+    }
+  }
+}

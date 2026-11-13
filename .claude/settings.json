@@ -1,0 +1,85 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash test.sh)",
+      "Bash(bash 3-verification/verify.sh:*)",
+      "Bash(node 4-memory/features.mjs:*)",
+      "Bash(node --test:*)",
+      "Bash(node 2-environment/serve.mjs)",
+      "Bash(node 2-environment/bot.mjs:*)",
+      "Bash(open http://localhost:5173)",
+      "Edit(1-wiki/**)",
+      "Edit(app/**)",
+      "Edit(4-memory/po-questions.md)",
+      "Edit(4-memory/progress.md)",
+      "Bash(bash 2-environment/get-asset.sh:*)",
+      "Bash(bash 3-verification/plan-check.sh)",
+      "mcp__playwright",
+      "mcp__context7",
+      "Read(reports/**)",
+      "Bash(node 2-environment/monitor.mjs:*)",
+      "Bash(node 2-environment/doctor.mjs:*)"
+    ],
+    "deny": [
+      "Edit(4-memory/features.json)",
+      "Edit(1-wiki/raw/**)",
+      "Edit(raw/**)",
+      "Edit(3-verification/**)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/2-environment/monitor-hook.mjs\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/2-environment/monitor-hook.mjs\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/2-environment/monitor-hook.mjs\""
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/2-environment/monitor-hook.mjs\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/2-environment/doctor.mjs\" --hook"
+          }
+        ]
+      }
+    ]
+  }
+}

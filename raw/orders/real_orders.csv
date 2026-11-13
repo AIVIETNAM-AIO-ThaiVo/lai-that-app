@@ -1,0 +1,10 @@
+id,platform,source,date_seen,price,seller_voucher,ship_buyer,fixed_fee,piship,service_fee,transaction_fee,affiliate,visibility_fee,vat,pit,total_deduction,payout_shown,note
+A_keo_sua,shopee,https://www.youtube.com/watch?v=CRe4m3Gp4vI (~8:10),2026-10-16,74692,0,21500,11951,2700,7108,5772,4840,807,747,373,34298,40394,dịch vụ = hạ tầng 3.000 + Voucher Xtra 4.108
+B_dem_topper,shopee,https://www.youtube.com/watch?v=B-7xjG5lnH8 (~18:38),2026-10-27,325000,0,34500,52000,0,20875,21570,0,0,3250,1625,99320,260180,doanh thu ước tính gồm 34.500 ship ước tính
+F_dien_tu,shopee,FB groupnguoibanshopee (Trần Xuân),2026-11,650000,3000,0,77640,2700,3000,38820,0,0,6470,3235,131865,515135,ngành 12%; không Voucher Xtra
+G_thuc_an_meo,shopee,FB groupnguoibanshopee (ẩn danh),2026,170000,0,146900,23800,0,12350,19014,0,0,0,850,56014,113986,không khấu trừ GTGT 1%
+H_thuc_an_meo,shopee,FB groupnguoibanshopee (ẩn danh),2026,180000,0,0,25200,0,12900,10800,0,0,1800,900,51600,128400,
+I_my_pham,shopee,FB groupnguoibanshopee (ẩn danh),2026-09,275000,0,0,46750,2700,18125,16500,0,0,2750,1375,88200,,ngành 17%
+J_thoi_trang,shopee,FB groupnguoibanshopee (ẩn danh),2026,450000,18000,0,71280,2700,26760,25920,34432,0,4320,2160,167572,,phí % tính trên 432.000
+K_thoi_trang,shopee,FB groupnguoibanshopee (ẩn danh),2026,350000,0,32800,57750,0,22250,22968,0,3780,3500,1750,111998,270802,doanh thu ước tính gồm 32.800 ship
+D_tiktok,tiktok_shop,https://www.youtube.com/watch?v=Rorgig4Cg8M (~5:05),2026-10-15,240000,,,23868,,10200,10200,34200,,,,83078,156922,"phí giao dịch 4,25% (tiết kiệm phí); xử lý đơn 2.550; shipping guarantee 2.060; cột service_fee = Voucher Xtra; chưa giải thích được hết"

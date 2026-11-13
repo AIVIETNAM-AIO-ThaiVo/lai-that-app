@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Chọn sàn chính</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A7A6B}a:hover{color:#075E52}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 56px 20px 28px; background: #F6F7F9; color: #12161C; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; gap: 24px; font-variant-numeric: tabular-nums">
+
+<div style="display: flex; gap: 6px" aria-label="Bước 1 trên 2">
+<span style="flex: 1; height: 4px; border-radius: 2px; background: {{accent}}"></span>
+<span style="flex: 1; height: 4px; border-radius: 2px; background: #D5DAE1"></span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700">Bạn bán chủ yếu ở đâu?</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A424E">Lãi Thật nạp sẵn biểu phí mới nhất của sàn đó. Đổi lúc nào cũng được.</p>
+</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Sàn bán chính</legend>
+<label style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; border: 2px solid #12161C">
+<input type="radio" name="san" checked style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1"><span style="font-size: 17px; font-weight: 600">Shopee</span><span style="font-size: 13px; color: #5B6472">Biểu phí từ 23/05/2026 · 31 ngành</span></span>
+</label>
+<label style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #D5DAE1">
+<input type="radio" name="san" style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1"><span style="font-size: 17px; font-weight: 600">TikTok Shop</span><span style="font-size: 13px; color: #5B6472">Biểu phí từ 09/05/2026</span></span>
+</label>
+<label style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #D5DAE1">
+<input type="radio" name="san" style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1"><span style="font-size: 17px; font-weight: 600">Lazada</span><span style="font-size: 13px; color: #5B6472">Bạn tự nhập % hoa hồng</span></span>
+</label>
+<label style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #D5DAE1">
+<input type="radio" name="san" style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1"><span style="font-size: 17px; font-weight: 600">Nhiều sàn</span><span style="font-size: 13px; color: #5B6472">Mở sẵn màn so sánh</span></span>
+</label>
+</fieldset>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 15px; font-weight: 600">Loại shop</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 4px; border-radius: 14px; background: #E8EBEF">
+<button type="button" style="height: 44px; border: 0; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #12161C; box-shadow: 0 1px 2px rgba(18,22,28,0.12)">Shop thường</button>
+<button type="button" style="height: 44px; border: 0; border-radius: 10px; background: transparent; font: inherit; font-size: 15px; font-weight: 500; color: #3A424E">Mall</button>
+</div>
+</div>
+
+<div style="flex: 1"></div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<button type="button" style="height: 54px; border-radius: 14px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 600">Tiếp tục</button>
+<p style="margin: 0; font-size: 12px; line-height: 1.5; color: #5B6472; text-align: center">Dùng ngay, không cần đăng nhập, dữ liệu lưu trên máy bạn. Ứng dụng độc lập, không liên kết với Shopee, TikTok hay Lazada. Biểu phí cập nhật 12/11/2026, bạn sửa được mọi con số.</p>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0A7A6B"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0A7A6B' };
+}
+}
+</script>
+</body>
+</html>

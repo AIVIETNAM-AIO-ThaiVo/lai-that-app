@@ -1,0 +1,20 @@
+{
+  "name": "lai-that-mobile",
+  "private": true,
+  "description": "Gói Android cho Lãi Thật bằng Capacitor (1-wiki/product/ADR-002-capacitor.md). Web app nằm ở ../app.",
+  "scripts": {
+    "web": "node scripts/prepare-web.mjs",
+    "sync": "npm run web && cap sync android",
+    "assets": "python scripts/android_assets.py",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor-community/admob": "^8.3.0",
+    "@capgo/native-purchases": "^8.9.11"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.2"
+  }
+}

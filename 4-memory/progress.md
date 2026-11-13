@@ -1,0 +1,96 @@
+# Progress — sổ tay của harness
+
+> Harness tự ghi vào đây sau mỗi lần chạy. Phiên sau đọc lại là biết đang ở đâu.
+
+- 2026-11-12 · Đổi ý tưởng sang **Lãi Thật** (launch kit). Dự án cũ ở `_archive/` (luật cấm AI xoá test/raw — người dùng tự xoá hẳn nếu muốn).
+- 2026-11-12 · Phạm vi lần build: tới P1, tới ngày 2. Bắt đầu Phase 1.
+- 2026-11-12 · Phase 1: engine.js/presets.js/calc.js/store.js xong, 31 unit test xanh (8/8 đơn thật). Đang làm giao diện.
+- 2026-11-12 · F1 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F2 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F3 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F4 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F5 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F6 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · Phase 1 F1–F6 claimed; bot 51 bước xanh trước khi sửa design
+- 2026-11-12 · F1 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F2 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F3 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F4 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F5 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F6 ✅ passing (verify.sh xanh)
+- 2026-11-12 · PM review Phase 1: ĐẠT (design a5 b5 c5 d4 e4). Bắt đầu Phase 2 (F7–F12).
+- 2026-11-12 · F7 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F8 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F9 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F10 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F11 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F12 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · Phase 2 F7–F12 claimed; 52 unit test + 89 bước bot
+- 2026-11-12 · F7 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F8 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F9 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F10 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F11 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F12 ✅ passing (verify.sh xanh)
+- 2026-11-12 · PM review Phase 2: ĐẠT. Bắt đầu Phase 3 (P1: F13–F18).
+- 2026-11-12 · F13 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F14 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F15 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F16 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F17 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F18 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · Phase 3 (P1) F13–F18 claimed; 64 unit test + 110 bước bot
+- 2026-11-12 · F13 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F14 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F15 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F16 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F17 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F18 ✅ passing (verify.sh xanh)
+- 2026-11-12 · PM review Phase 3: ĐẠT. 18/18 ✅. Dừng ở giới hạn P1 + ngày 2. Việc tiếp theo (ngày 3): AdMob, Billing, paywall, bật khoá Pro, store listing.
+- 2026-11-12 · Logo mới gắn vào app; verify xanh (111 bước).
+- 2026-11-12 · F10 ⏳ mở lại
+- 2026-11-12 · F10 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F19 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F20 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · Phase 4 (phản hồi): F19 tách Tính nhanh/Sản phẩm, F20 màn mở app, bỏ logo Cài đặt; F10 chấm lại
+- 2026-11-12 · F10 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F19 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F20 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F20 ⏳ mở lại
+- 2026-11-12 · F21 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F20 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F20 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F21 ✅ passing (verify.sh xanh)
+- 2026-11-12 · design F21: a5 b5 c5 d5 e4 · F20 liquid: a5 b- c5 d5 e5
+- 2026-11-12 · F20 ⏳ mở lại
+- 2026-11-12 · F22 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F20 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-12 · F20 ✅ passing (verify.sh xanh)
+- 2026-11-12 · F22 ✅ passing (verify.sh xanh)
+- 2026-11-12 · design F22: a5 b4 c5 d5 e4 · F20 giữ bo tròn: diff 1000→1240ms = 0
+- 2026-11-13 · F23 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F23 ✅ passing (verify.sh xanh)
+- 2026-11-13 · design F23: a5 b4 c5 d5 e4
+- 2026-11-13 · F24 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F25 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F26 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F24 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F25 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F26 ✅ passing (verify.sh xanh)
+- 2026-11-13 · design F24: a5 b4 c5 d5 e5 · F25: a5 b4 c5 d5 e4 · F26 ảnh store: a5 b5 c5 d5 e5
+- 2026-11-13 · F26 ⏳ mở lại
+- 2026-11-13 · F26 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F27 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F26 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F27 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F25 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F25 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F28 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F29 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F30 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F28 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F29 ✅ passing (verify.sh xanh)
+- 2026-11-13 · F30 ✅ passing (verify.sh xanh)
+- 2026-11-13 · design: a5 b5 c5 d4 e4
+- 2026-11-13 · F18 🟡 claimed (Model báo đã làm) — chờ verify.sh chứng minh
+- 2026-11-13 · F18 ✅ passing (verify.sh xanh)

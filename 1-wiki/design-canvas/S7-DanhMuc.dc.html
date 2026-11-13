@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Danh mục và báo động</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A7A6B}a:hover{color:#075E52}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F7F9; color: #12161C; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; font-variant-numeric: tabular-nums">
+
+<div style="flex: 1; padding: 48px 20px 16px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h1 style="margin: 0; font-size: 24px; font-weight: 700">Sản phẩm của bạn</h1>
+<span style="font-size: 13px; color: #5B6472">4/5 miễn phí</span>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 10px; border-radius: 16px; padding: 16px; background: #FCEBE3; border: 1px solid #F3C7B3" aria-label="Cảnh báo phí">
+<div style="display: flex; gap: 10px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{loss}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 700">Biểu phí Shopee mới đã áp dụng</span>
+<span style="font-size: 14px; line-height: 1.45">2 sản phẩm chuyển sang lỗ. Kiểm tra lại giá trước khi chạy khuyến mãi.</span>
+</div>
+</div>
+<button type="button" style="height: 44px; border-radius: 12px; border: 0; background: #12161C; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Xem giá đề xuất cho 2 sản phẩm</button>
+</section>
+
+<div style="display: flex; gap: 8px">
+<button type="button" aria-pressed="true" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 0; background: #12161C; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Tất cả</button>
+<button type="button" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #12161C">Đang lỗ · 2</button>
+<button type="button" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 1px solid #C9CFD8; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #12161C">Lãi mỏng · 1</button>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 68px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 14px">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Kẹp tóc</span><span style="font-size: 12px; color: #5B6472">Shopee · bán 12.000đ → gợi ý <b style="color: #12161C">18.900đ</b></span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 16px; font-weight: 700; color: {{loss}}">−1.380đ</span><span style="font-size: 12px; font-weight: 600; color: {{loss}}">Lỗ · −11,5%</span></span>
+</li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 68px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 14px">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Ốp điện thoại</span><span style="font-size: 12px; color: #5B6472">Shopee · bán 25.000đ → gợi ý <b style="color: #12161C">34.900đ</b></span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 16px; font-weight: 700; color: {{loss}}">−125đ</span><span style="font-size: 12px; font-weight: 600; color: {{loss}}">Lỗ · −0,5%</span></span>
+</li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 68px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 14px">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Móc khóa</span><span style="font-size: 12px; color: #5B6472">Shopee · bán 17.000đ</span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 16px; font-weight: 700; color: {{thin}}">505đ</span><span style="font-size: 12px; font-weight: 600; color: {{thin}}">Lãi mỏng · 3,0%</span></span>
+</li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 68px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 14px">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Áo thun nữ</span><span style="font-size: 12px; color: #5B6472">Shopee · bán 149.000đ</span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 16px; font-weight: 700; color: {{accent}}">41.061đ</span><span style="font-size: 12px; font-weight: 600; color: {{accent}}">Lãi · 27,6%</span></span>
+</li>
+</ul>
+
+<p style="margin: 0; font-size: 12px; line-height: 1.5; color: #5B6472">Sắp theo lãi thấp nhất lên đầu. Giá gợi ý giữ lãi 20%, làm tròn giá đẹp. Khi sàn đổi biểu phí, app tính lại mọi sản phẩm và gửi một thông báo.</p>
+
+</div>
+
+<nav style="display: grid; grid-template-columns: repeat(4, 1fr); height: 72px; background: #FFFFFF; border-top: 1px solid #E3E6EB" aria-label="Điều hướng chính">
+<a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #5B6472; font-size: 12px; font-weight: 500">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M8 6h8"></path><path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h8"></path></svg>Tính</a>
+<a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #5B6472; font-size: 12px; font-weight: 500">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 16v-5M12 16V8M17 16v-3"></path></svg>So sánh</a>
+<a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: {{accent}}; font-size: 12px; font-weight: 600">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><path d="m3 8 9 5 9-5M12 13v8"></path></svg>Sản phẩm</a>
+<a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #5B6472; font-size: 12px; font-weight: 500">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>Cài đặt</a>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0A7A6B"},"thin":{"editor":"color","default":"#A16207"},"loss":{"editor":"color","default":"#C2410C"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+accent: this.props.accent ?? '#0A7A6B',
+thin: this.props.thin ?? '#A16207',
+loss: this.props.loss ?? '#C2410C'
+};
+}
+}
+</script>
+</body>
+</html>

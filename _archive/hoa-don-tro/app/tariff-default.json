@@ -1,0 +1,20 @@
+{
+  "tariff_version": "2026-11-01-qd2892",
+  "effective_from": "2026-11-01",
+  "source": "QĐ 2892/QĐ-BCT ngày 31/10/2026",
+  "household_size": 4,
+  "tiers": [
+    { "width": 100, "price": 1901 },
+    { "width": 100, "price": 2289 },
+    { "width": 200, "price": 2894 },
+    { "width": 300, "price": 3456 },
+    { "width": null, "price": 3844 }
+  ],
+  "vat": [
+    { "from": "2000-01", "to": "2026-12", "rate": 8, "source": "NQ 204/2025/QH15 (8% đến hết 31/12/2026)" },
+    { "from": "2027-01", "to": null, "rate": 10, "source": "Mặc định chờ văn bản mới" }
+  ],
+  "undeclared_rate": 2289,
+  "undeclared_source": "TT 60/2025/TT-BCT — giá khoảng 101–200 kWh",
+  "undeclared_note": "Một số báo ghi 2.894đ (bậc 3). App dùng 2.289đ cho đến khi có xác nhận chính thức."
+}

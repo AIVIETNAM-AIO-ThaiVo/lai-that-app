@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@0.0.83",
+        "--headless",
+        "--isolated",
+        "--browser",
+        "chrome",
+        "--viewport-size",
+        "390,844",
+        "--caps",
+        "vision",
+        "--output-dir",
+        "reports/mcp"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@4.4.0"
+      ]
+    }
+  }
+}

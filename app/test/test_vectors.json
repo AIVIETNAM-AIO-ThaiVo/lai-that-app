@@ -1,0 +1,135 @@
+[
+  {
+    "id": "A_keo_sua",
+    "source": "https://www.youtube.com/watch?v=CRe4m3Gp4vI (~8:10), đã nhận tiền 16/10/2026",
+    "platform": "shopee",
+    "price": 74692,
+    "seller_voucher": 0,
+    "ship_buyer": 21500,
+    "category_rate": 0.16,
+    "programs": [
+      "voucher_xtra",
+      "piship",
+      "visibility"
+    ],
+    "affiliate_rate": 0.06479944304610935,
+    "vat": true,
+    "expected_total_deduction": 34298,
+    "engine_total_deduction": 34297.35
+  },
+  {
+    "id": "B_dem_topper",
+    "source": "https://www.youtube.com/watch?v=B-7xjG5lnH8 (~18:38), 27/10/2026",
+    "platform": "shopee",
+    "price": 325000,
+    "seller_voucher": 0,
+    "ship_buyer": 34500,
+    "category_rate": 0.16,
+    "programs": [
+      "voucher_xtra"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": true,
+    "expected_total_deduction": 99320,
+    "engine_total_deduction": 99320.0
+  },
+  {
+    "id": "F_dien_tu",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch', đơn 11/2026",
+    "platform": "shopee",
+    "price": 650000,
+    "seller_voucher": 3000,
+    "ship_buyer": 0,
+    "category_rate": 0.12,
+    "programs": [
+      "piship"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": true,
+    "expected_total_deduction": 131865,
+    "engine_total_deduction": 131865.0
+  },
+  {
+    "id": "G_thuc_an_meo",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+    "platform": "shopee",
+    "price": 170000,
+    "seller_voucher": 0,
+    "ship_buyer": 146900,
+    "category_rate": 0.14,
+    "programs": [
+      "voucher_xtra"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": false,
+    "expected_total_deduction": 56014,
+    "engine_total_deduction": 56014.0
+  },
+  {
+    "id": "H_thuc_an_meo",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+    "platform": "shopee",
+    "price": 180000,
+    "seller_voucher": 0,
+    "ship_buyer": 0,
+    "category_rate": 0.14,
+    "programs": [
+      "voucher_xtra"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": true,
+    "expected_total_deduction": 51600,
+    "engine_total_deduction": 51600.0
+  },
+  {
+    "id": "I_my_pham",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch', thanh toán dự kiến 15/09/2026",
+    "platform": "shopee",
+    "price": 275000,
+    "seller_voucher": 0,
+    "ship_buyer": 0,
+    "category_rate": 0.17,
+    "programs": [
+      "voucher_xtra",
+      "piship"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": true,
+    "expected_total_deduction": 88200,
+    "engine_total_deduction": 88200.0
+  },
+  {
+    "id": "J_thoi_trang",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+    "platform": "shopee",
+    "price": 450000,
+    "seller_voucher": 18000,
+    "ship_buyer": 0,
+    "category_rate": 0.165,
+    "programs": [
+      "voucher_xtra",
+      "piship"
+    ],
+    "affiliate_rate": 0.07970370370370371,
+    "vat": true,
+    "expected_total_deduction": 167572,
+    "engine_total_deduction": 167572.0
+  },
+  {
+    "id": "K_thoi_trang",
+    "source": "Nhóm Facebook 'Shopee người bán - chia sẻ kinh nghiệm bán hàng Shopee' (groupnguoibanshopee), tìm 'phí xử lý giao dịch'",
+    "platform": "shopee",
+    "price": 350000,
+    "seller_voucher": 0,
+    "ship_buyer": 32800,
+    "category_rate": 0.165,
+    "programs": [
+      "voucher_xtra",
+      "visibility"
+    ],
+    "affiliate_rate": 0.0,
+    "vat": true,
+    "expected_total_deduction": 111998,
+    "engine_total_deduction": 111998.0
+  }
+]

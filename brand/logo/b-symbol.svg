@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Lãi Thật — B · Thăng bằng</title>
+  <!-- B v2 · Thăng bằng: ô vuông 192 bo 44 (khung), cửa sổ ống thăng bằng 152×64 bo tròn khoét rỗng (evenodd),
+       bọt khí r 20 đúng giữa, hai vạch 10×36 cách bọt 18. Cửa sổ đặt cao hơn tâm 4px (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M76 32h104a44 44 0 0 1 44 44v104a44 44 0 0 1-44 44H76a44 44 0 0 1-44-44V76a44 44 0 0 1 44-44zm8 60a32 32 0 0 0 0 64h88a32 32 0 0 0 0-64z"/>
+  <circle cx="128" cy="124" r="20" fill="#000"/>
+  <rect x="85" y="106" width="10" height="36" rx="5" fill="#000"/>
+  <rect x="161" y="106" width="10" height="36" rx="5" fill="#000"/>
+</svg>

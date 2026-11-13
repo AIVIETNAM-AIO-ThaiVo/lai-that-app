@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Lãi Thật Pro</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0A7A6B}a:hover{color:#075E52}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 40px 20px 20px; background: #FFFFFF; color: #12161C; font-family: 'Be Vietnam Pro', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px; font-variant-numeric: tabular-nums">
+
+<div style="display: flex; justify-content: flex-end">
+<button type="button" aria-label="Đóng" style="width: 44px; height: 44px; margin-right: -10px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12161C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Lãi Thật Pro</div>
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700">Biết ngay sản phẩm nào đang lỗ khi sàn đổi phí</h1>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3A424E">Tính lãi, xem từng khoản phí, tính giá theo % lãi và so sánh sàn luôn miễn phí.</p>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg><span>Lưu không giới hạn sản phẩm (bản miễn phí: 5)</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg><span>Báo động khi biểu phí mới làm sản phẩm chuyển sang lỗ</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg><span>Giá Flash Sale, giá nhập tối đa, lãi dự kiến cả tháng</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg><span>Không quảng cáo, xuất danh mục gửi Zalo</span></li>
+</ul>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Chọn gói</legend>
+<label style="position: relative; display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 0 16px; border-radius: 14px; border: 2px solid #12161C; background: #F6F7F9">
+<input type="radio" name="goi" checked style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 700">Theo năm</span><span style="font-size: 13px; color: #3A424E">≈ 24.900đ mỗi tháng</span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 17px; font-weight: 700">299.000đ</span><span style="font-size: 12px; font-weight: 700; color: {{accent}}">Tiết kiệm 49%</span></span>
+</label>
+<label style="display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 0 16px; border-radius: 14px; border: 1px solid #D5DAE1">
+<input type="radio" name="goi" style="width: 20px; height: 20px; accent-color: #12161C; margin: 0">
+<span style="flex: 1; font-size: 17px; font-weight: 600">Theo tháng</span>
+<span style="font-size: 17px; font-weight: 700">49.000đ</span>
+</label>
+</fieldset>
+
+<div style="flex: 1"></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<button type="button" style="height: 54px; border-radius: 14px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 600">Dùng thử 3 ngày miễn phí</button>
+<p style="margin: 0; font-size: 12px; line-height: 1.55; color: #5B6472; text-align: center">Báo trước 1 ngày khi hết dùng thử. Sau 3 ngày, Google Play trừ 299.000đ và tự gia hạn mỗi năm. Hủy bất cứ lúc nào trong Google Play › Gói thuê bao, trước khi hết hạn ít nhất 24 giờ.</p>
+<div style="display: flex; justify-content: center; gap: 20px; font-size: 13px">
+<a href="#" style="min-height: 44px; display: flex; align-items: center">Khôi phục giao dịch</a>
+<a href="#" style="min-height: 44px; display: flex; align-items: center">Điều khoản</a>
+<a href="#" style="min-height: 44px; display: flex; align-items: center">Quyền riêng tư</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0A7A6B"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0A7A6B' };
+}
+}
+</script>
+</body>
+</html>

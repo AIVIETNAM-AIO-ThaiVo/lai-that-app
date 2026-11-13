@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- B · Thăng bằng: ống thăng bằng 208×96 bo tròn hết, viền dày 24 (lỗ rỗng evenodd), bọt khí tròn r 26 nằm đúng giữa,
+       hai vạch dọc 12×40 hai bên bọt khí. Đặt hơi cao hơn tâm hình học (quang học). -->
+  <path fill-rule="evenodd" fill="#000" d="M72 76h112a48 48 0 0 1 0 96H72a48 48 0 0 1 0-96zm0 24a24 24 0 0 0 0 48h112a24 24 0 0 0 0-48z"/>
+  <circle cx="128" cy="124" r="22" fill="#000"/>
+  <rect x="86" y="104" width="12" height="40" rx="6" fill="#000"/>
+  <rect x="158" y="104" width="12" height="40" rx="6" fill="#000"/>
+</svg>

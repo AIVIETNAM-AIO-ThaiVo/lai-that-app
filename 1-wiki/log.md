@@ -1,0 +1,58 @@
+# Log — mỗi thay đổi một dòng
+
+Nhật ký gốc của launch kit (12/11/2026, trước khi vào harness): [kit-log.md](kit-log.md).
+
+- 2026-11-12 · harness · đổi ý tưởng sang Lãi Thật: Hóa Đơn Trọ + game mẫu cất vào `_archive/`, wiki cũ xoá; kit đặt vào raw/, 1-wiki/, docs/, tools/, flutter/
+- 2026-11-12 · sync · tools/validate.py chạy lại trên máy: 8/8 đơn Shopee đạt (lệch 0–1đ); test_vectors.json → app/test/
+- 2026-11-12 · plan · overview, phases (3 phase, dừng ở P1 + ngày 2), style, screens, ADR-001, 18 feature (F1–F18)
+- 2026-11-12 · build · F1 ✅ passing (Bộ máy tính phí sàn (engine))
+- 2026-11-12 · build · F2 ✅ passing (Biểu phí, nguồn và miễn trừ)
+- 2026-11-12 · build · F3 ✅ passing (Chọn sàn chính (onboarding))
+- 2026-11-12 · build · F4 ✅ passing (Tính lãi từ giá bán)
+- 2026-11-12 · build · F5 ✅ passing (Tính từ % lãi muốn có (giá nên bán))
+- 2026-11-12 · build · F6 ✅ passing (Chi tiết phí ("17.000đ đi đâu?"))
+- 2026-11-12 · review · Phase 1 ĐẠT (PM) → Phase 2
+- 2026-11-12 · build · F7 ✅ passing (So sánh sàn)
+- 2026-11-12 · build · F8 ✅ passing (Chi phí ẩn: hoàn hàng, voucher, quảng cáo)
+- 2026-11-12 · build · F9 ✅ passing (Flash Sale & giá nhập tối đa)
+- 2026-11-12 · build · F10 ✅ passing (Danh mục sản phẩm)
+- 2026-11-12 · build · F11 ✅ passing (Báo động khi sàn đổi phí)
+- 2026-11-12 · build · F12 ✅ passing (Tracking theo TRACKING_PLAN)
+- 2026-11-12 · review · Phase 2 ĐẠT (PM) → Phase 3 (P1)
+- 2026-11-13 · build · F13 ✅ passing (Mô phỏng lãi tháng theo số đơn)
+- 2026-11-13 · build · F14 ✅ passing (Chia sẻ kết quả qua Zalo)
+- 2026-11-13 · build · F15 ✅ passing (Ví dụ mẫu lần đầu)
+- 2026-11-13 · build · F16 ✅ passing (Áp giá gợi ý 1 chạm cho nhiều sản phẩm)
+- 2026-11-13 · build · F17 ✅ passing (Nhắc mùa sale)
+- 2026-11-13 · build · F18 ✅ passing (Shopee Mall / TikTok Mall + miễn phí cố định 30 ngày cho shop mới)
+- 2026-11-13 · review · Phase 3 (P1) ĐẠT (PM) — 18/18 tính năng ✅; dừng ở giới hạn P1 + ngày 2
+- 2026-11-13 · design · logo mới (skill logo-design, người dùng chọn 4 bước): hướng A · Phần còn lại, mảnh phí xám → app/icon.svg, app/icons/, màn Chọn sàn + Cài đặt; brand/logo/
+- 2026-11-13 · plan · phản hồi người dùng: F19 tách Tính nhanh / Sản phẩm, F20 màn mở app có logo động, bỏ logo ở Cài đặt; sửa Done when F10
+- 2026-11-13 · build · F10 ✅ passing (Danh mục sản phẩm)
+- 2026-11-13 · build · F19 ✅ passing (Tách Tính nhanh và Sản phẩm)
+- 2026-11-13 · build · F20 ✅ passing (Màn mở app có logo động)
+- 2026-11-13 · review · Phase 4 ĐẠT (F10, F19, F20 ✅)
+- 2026-11-13 · build · F20 ✅ passing (Màn mở app có logo động (tách kiểu chất lỏng))
+- 2026-11-13 · build · F21 ✅ passing (Thêm sản phẩm ngay trong danh mục)
+- 13/11 · Phase 5: F21 Thêm sản phẩm trong danh mục; F20 làm lại tách kiểu chất lỏng (skill wiggle, brand/logo/motion/). Verify xanh, PM ĐẠT.
+- 2026-11-13 · build · F20 ✅ passing (Màn mở app có logo động (tách kiểu chất lỏng))
+- 2026-11-13 · build · F22 ✅ passing (Lãi của mỗi sản phẩm trên mọi sàn bạn bán)
+- 13/11 · Phase 6: F22 lãi theo từng sàn bạn bán (Cài đặt, danh mục, màn sản phẩm, báo động đổi phí); F20 giữ góc bo tới cuối. Verify xanh, PM ĐẠT.
+- 2026-11-13 · build · F23 ✅ passing (Áp giá gợi ý theo từng sàn (chọn sàn))
+- 13/11 · Phase 7: F23 áp giá gợi ý chọn từng sàn (trả lời PO). Vốn/chi phí dùng chung mọi sàn. Verify xanh, PM ĐẠT.
+- 2026-11-13 · build · F24 ✅ passing (Lãi Thật Pro: paywall 4 điểm, 2 gói, dùng thử 3 ngày)
+- 2026-11-13 · build · F25 ✅ passing (Quảng cáo + đồng ý (AdMob/UMP trên bản web))
+- 2026-11-13 · build · F26 ✅ passing (Phát hành: chính sách quyền riêng tư, bộ ảnh store, gói Android (TWA), video demo)
+- 13/11 · Phase 8 (ngày 3): F24 Pro + paywall 4 điểm + thanh toán (Play Billing trong TWA / chế độ thử), F25 quảng cáo + đồng ý, F26 chính sách trong app, ảnh store, TWA, video demo. Verify xanh, PM ĐẠT phần làm được; AAB / tài khoản cần nhóm.
+- 2026-11-13 · build · F26 ✅ passing (Phát hành: chính sách quyền riêng tư, bộ ảnh store, gói Android, video demo)
+- 2026-11-13 · build · F27 ✅ passing (Gói Android bằng Capacitor: AdMob + Google Play Billing gốc)
+- 13/11 · Phase 9: ADR-002 đóng gói Android bằng Capacitor thay TWA; F27 AdMob + Play Billing gốc qua plugin (app/native.js), bỏ twa/. Verify xanh; chưa cài npm / chưa build AAB.
+- 2026-11-13 · build · F25 ✅ passing (Quảng cáo + đồng ý (luật hiển thị; khung thử trên web))
+- 13/11 · F27: cài Capacitor + tạo mobile/android (AdMob App ID thử, biểu tượng, bỏ file kiểm thử khỏi APK). Verify xanh.
+- 2026-11-13 · build · F28 ✅ passing (Combo: bán theo bộ, so với bán lẻ, giảm tối đa)
+- 2026-11-13 · build · F29 ✅ passing (Kiểm tra đơn: nhập tay 1 đơn, so từng khoản, chẩn đoán, sửa ngay)
+- 2026-11-13 · build · F30 ✅ passing (Kiểm tra cả file Báo Cáo Doanh Thu (Shopee .xlsx))
+- 13/11 · Phase 10: add-on Combo (F28) + Kiểm tra đơn nhập tay (F29) + cả file .xlsx (F30); thanh dưới 5 tab; tracking 10 sự kiện; chính sách + store listing cập nhật. Verify xanh 134 test + 230 check.
+- 13/11 · docs · README: viết lại pitch, vấn đề, người dùng, kênh phát hành, cách có người dùng và doanh thu; thêm phần research thị trường diện rộng bằng Claude (7 vòng, ~35 agent) vào AI-native workflow.
+- 2026-11-13 · build · F18 ✅ passing (Miễn phí cố định 30 ngày cho shop mới)
+- 13/11 · Bỏ Mall (PO): F3 không hỏi loại shop, F18 chỉ còn miễn phí 30 ngày shop mới; onboarding_completed bỏ shop_type. README: bảng Team 5 người. Verify xanh.

@@ -1,0 +1,12 @@
+﻿event,trigger,params
+combo_built,Thẻ kết quả combo hiện lần đầu trong phiên,"platform, mode, items_count, discount_type, margin_bucket"
+combo_vs_separate_viewed,Xem dòng so bán lẻ,"platform, uplift_bucket"
+combo_max_discount_viewed,Mở phần Giảm tối đa,"target_margin, is_pro"
+combo_saved,Lưu combo,"items_count, mode"
+order_check_started,Bắt đầu kiểm tra đơn,"method, platform"
+order_check_completed,Có kết quả kiểm tra,"method, orders_count, mismatch_count, top_reason"
+order_check_file_error,File Báo Cáo Doanh Thu sai mẫu,"error_code, missing_column"
+mismatch_reason_viewed,Mở câu chẩn đoán lệch,"reason_code, fee_key"
+category_rate_updated_from_check,Cập nhật ngành/chương trình từ dòng lệch,"reason_code, platform"
+complaint_template_copied,Sao chép mẫu khiếu nại,"fee_key, diff_bucket"
+paywall_view (đã có),Thêm giá trị source cho add-on,source = combo_tab / order_check_file
